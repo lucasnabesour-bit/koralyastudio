@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /*?outil=
-Sitemap: https://koralyastudio.contactkoralyastudio.workers.dev/sitemap.xml
