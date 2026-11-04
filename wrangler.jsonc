@@ -1,8 +1,0 @@
-{
-  "name": "koralyastudio",
-  "compatibility_date": "2026-10-21",
-  "workers_dev": true,
-  "assets": {
-    "directory": "./public"
-  }
-}

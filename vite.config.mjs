@@ -1,0 +1,1 @@
+import {defineConfig} from 'vite';import react from '@vitejs/plugin-react';export default defineConfig({root:'client',base:'/',plugins:[react()],build:{outDir:'../dist',emptyOutDir:false,rollupOptions:{input:'client/cercle-demo/index.html'}}});
