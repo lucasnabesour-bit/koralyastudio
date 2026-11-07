@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="form-action 'none'"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#090f16"><style>:root{--bg:#080e14;--panel:#101b25;--panel-alt:#151c2e;--text:#f4f6f8;--muted:#b7bec8;--accent:#91e34f;--purple:#a67ae5;--line:#24313e;--dark:#102211;color-scheme:dark;font-family:Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;color:var(--text);background:var(--bg);font-size:15px;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}a,button,input,textarea,select,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}::selection{color:#07120b;background:var(--accent)}[hidden]{display:none!important}.wrap{width:min(1180px,calc(100% - 72px));margin-inline:auto}.skip{position:fixed;top:-80px;left:20px;background:var(--accent);color:#0d1c0b;padding:12px;z-index:99}.skip:focus{top:10px}.header{width:min(1280px,calc(100% - 64px));height:86px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:40px;border-bottom:1px solid #1c2733;position:relative;z-index:20}.brand{display:inline-flex;flex-shrink:0}.brand img{width:156px;height:52px;object-fit:contain}.header nav{display:flex;align-items:center;gap:30px;font-size:12px}.header nav a{min-height:44px;display:flex;align-items:center;position:relative}.header nav a[aria-current="page"]:not(:last-child){color:var(--accent)}.header nav a[aria-current="page"]:not(:last-child):after{content:'';position:absolute;bottom:0;left:0;right:0;border-bottom:2px solid var(--accent)}.header nav a:last-child{background:var(--accent);color:#102211;font-weight:700;border:1px solid var(--accent);border-radius:8px;padding:0 20px}.header nav a:last-child[aria-current]{background:#b2f285}.menu-toggle{display:none}.hero{position:relative;margin-top:26px;min-height:555px;overflow:hidden;border:1px solid #20303c;border-radius:12px;background:#070e17;display:flex;align-items:center}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}.hero-copy{position:relative;z-index:1;padding:56px 38px 38px;max-width:690px}.hero-tag{display:inline-block;font-size:11px;color:#d4d9df;background:#0b141dd9;padding:5px 12px;border:1px solid #45535e;border-radius:20px;margin:0 0 22px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(38px,4.2vw,54px);line-height:1.15;letter-spacing:-1.8px;font-weight:700;margin-bottom:22px}h2{font-size:32px;line-height:1.25;letter-spacing:-.7px;margin-bottom:18px;font-weight:600}h3{font-size:20px;line-height:1.35;font-weight:600;margin:18px 0 12px}em{font-family:inherit;font-style:normal;font-weight:inherit;color:inherit}.lead{font-size:16px;color:var(--muted);line-height:1.75;max-width:530px}.hero .lead{color:#e1e5e9;max-width:435px;font-size:15px;line-height:1.7;text-shadow:0 1px 4px #000}.hero h1{text-shadow:0 2px 12px #0008}.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#11210b;font-size:13px;font-weight:700;line-height:1.5;transition:background-color .15s,border-color .15s}.button.secondary{color:var(--text);background:#111923;border-color:#394553}.purple-button{background:#7850b5;border-color:#9c77d2;color:white}.hero-points{display:flex;gap:28px;list-style:none;padding:0;margin:38px 0 0}.hero-points li{padding-left:12px;border-left:2px solid var(--accent)}.hero-points li:nth-child(3){border-color:var(--purple)}.hero-points strong{display:block;font-size:12px}.hero-points span{display:block;font-size:9px;color:#c6cdd5;margin-top:4px}.eyebrow{font-size:10px;letter-spacing:1.4px;font-weight:700;color:var(--accent);margin:0 0 14px}.section{padding-block:70px}.section-heading{margin-bottom:30px}.section-heading.centered{text-align:center}.section-heading p:not(.eyebrow){font-size:14px;color:var(--muted);max-width:550px;margin-inline:auto;margin-bottom:0}.benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.benefits article,.delivery-cards article{background:var(--panel);border:1px solid #20303b;border-radius:10px;padding:25px}.number{font-size:12px;background:#123027;color:var(--accent);padding:9px 10px;display:inline-block;border-radius:7px;line-height:1}.number.purple{background:#302144;color:#cda7ff}.benefits p,.delivery-cards p{font-size:13px;color:var(--muted);margin-bottom:0}.featured-offer{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;background:#0e1b20;border:1px solid #2e4b36;border-radius:12px;padding:40px 50px}.featured-offer>div:first-child{align-self:center}.featured-offer>div>p:not(.eyebrow){font-size:14px;color:var(--muted);max-width:470px}.text-link{font-size:13px;display:inline-block;padding:9px 0;color:var(--accent);border-bottom:1px solid #567646}.offer-summary{padding-left:48px;border-left:1px solid #304536}.offer-summary>span{font-size:11px;letter-spacing:1.3px;color:#d5dfd7}.offer-summary>strong{display:block;font-size:54px;line-height:1.2;margin:15px 0 6px;color:var(--accent);font-weight:500}.offer-summary>strong small{font-size:34px}.offer-summary>p{font-size:10px!important}.offer-summary .button{margin-top:15px}.check-list{list-style:disc;padding-left:18px;margin:20px 0 0;color:var(--accent)}.check-list li{font-size:13px;margin-bottom:10px;padding-left:2px}.check-list li::marker{color:var(--accent)}.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;padding:0;gap:20px;margin:10px 0 0;position:relative}.steps li{text-align:center;position:relative;padding:0 8px}.steps li:not(:last-child):after{content:'';position:absolute;top:20px;left:calc(50% + 28px);width:calc(100% - 36px);border-top:1px solid #384250}.steps li>span{font-size:12px;font-weight:700;display:inline-flex;width:40px;height:40px;align-items:center;justify-content:center;border-radius:50%;background:#1d2c35;border:1px solid #3d5658;color:var(--accent);position:relative;z-index:1}.steps li:nth-child(even)>span{color:#cda7ff;background:#29213d;border-color:#53416a}.steps h2,.steps h3{font-size:15px;letter-spacing:0;margin:15px 0 7px}.steps p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}.center-action{text-align:center;margin-top:30px}.cta{display:flex;align-items:center;justify-content:space-between;gap:35px;padding:35px 40px;margin-bottom:65px;border:1px solid #324d38;background:#10231b;border-radius:10px}.cta h2{font-size:29px;margin-bottom:9px}.cta p:not(.eyebrow){font-size:13px;color:var(--muted);margin-bottom:0}.cta .button{flex-shrink:0}.footer{width:min(1180px,calc(100% - 72px));margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding-bottom:25px}.footer .brand img{width:130px;height:44px}.footer p{font-size:12px;color:var(--muted);margin:8px 0}.small{font-size:11px;color:var(--muted);line-height:1.7}.footer-links{display:flex;flex-wrap:wrap;gap:16px 24px;justify-content:flex-end;align-content:flex-start;font-size:11px;padding-top:17px}.footer-bottom{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:#aab5c0}.page-intro{padding-top:60px;padding-bottom:50px;text-align:center}.page-intro h1{font-size:38px;letter-spacing:-1px;margin-bottom:15px}.page-intro .lead{margin-inline:auto;margin-bottom:0;font-size:14px;max-width:600px}.pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.price-card{background:var(--panel);border:1px solid #2a3545;border-radius:10px;padding:30px;display:flex;flex-direction:column;position:relative}.price-card:first-child{background:#112026}.price-card:nth-child(2){background:#1a1c2e}.price-card:nth-child(3){background:#151b29}.price-card h2{font-size:25px;margin-bottom:12px}.price-card .eyebrow{font-size:8px;letter-spacing:1px;color:#b7c3ce}.price{font-size:40px;line-height:1.2;letter-spacing:-1px;margin:6px 0 18px;color:#d5dc7d}.price-card:nth-child(3) .price{color:white}.price span{font-size:29px}.price small{font-size:12px;letter-spacing:0;font-weight:400}.price-card>p{color:var(--muted);font-size:13px;min-height:65px}.price-card .check-list{margin:0 0 24px;color:#dce2e8}.price-card .check-list li{font-size:12px;margin-bottom:12px}.price-card .button{margin-top:auto;min-height:44px;font-size:12px;width:100%;padding-inline:12px}.price-card:nth-child(n+2) .button{background:#7850b5;border-color:#9a73d1;color:#fff}.featured{border-color:#775b9b}.recommended{position:absolute;top:-12px;left:25px;font-size:8px;letter-spacing:1px;font-weight:700;background:#aa82e4;color:#120d1a;padding:4px 12px;border-radius:20px}.pricing-note{font-size:11px;color:var(--muted);margin-top:25px;line-height:1.8;text-align:center}.deliverables{display:grid;grid-template-columns:1fr 1fr;gap:90px}.deliverables>div>p:not(.eyebrow){font-size:14px;color:var(--muted);max-width:420px}.page-list{list-style:none;margin:0;padding:0}.page-list li{display:flex;gap:25px;padding:18px 0;border-top:1px solid var(--line)}.page-list li>span{color:var(--accent);font-size:11px;padding-top:4px}.page-list h3{margin:0 0 5px;font-size:20px}.page-list p{font-size:13px;color:var(--muted);margin:0}.faq-section{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;padding-bottom:70px}.faq details,.legal details{border-top:1px solid var(--line);padding:17px 0}.faq details:last-child,.legal details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;line-height:1.6;font-size:14px;min-height:30px}summary::marker{color:var(--accent)}details p{font-size:13px;color:var(--muted);margin:15px 0 0;line-height:1.8}.delivery-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.delivery-cards h3{font-size:18px}.delivery-cards article{padding:24px}.prep{display:grid;grid-template-columns:1fr 1fr;gap:60px;background:var(--panel);border:1px solid var(--line);padding:36px 40px;border-radius:10px}.prep p:not(.eyebrow){font-size:14px;color:var(--muted)}.prep .check-list{align-self:center;margin-top:0;color:#dce2e8}.contact-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;padding-bottom:70px}.contact-aside h2{font-size:30px}.contact-aside>p:not(.eyebrow){font-size:14px;color:var(--muted)}.contact-link{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:20px 0}.contact-link span:first-child{font-size:11px;color:var(--muted)}.contact-link strong{display:block;font-size:15px;color:var(--text);font-weight:500;overflow-wrap:anywhere}.contact-aside>p.small{font-size:11px;margin-top:25px}.form-card{padding:30px;background:var(--panel);border:1px solid #2b3846;border-radius:10px}.form-card h2{font-size:24px;margin-bottom:10px}.form-card form>p:first-of-type{font-size:12px;color:var(--muted);margin-bottom:25px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{display:block;font-size:12px;margin-bottom:8px}label>span{font-size:10px;color:var(--muted)}input,textarea,select{width:100%;min-height:48px;margin:0 0 22px;border:1px solid #45515f;background:#0c151e;border-radius:6px;padding:12px;color:var(--text);font-size:16px}input::placeholder,textarea::placeholder{font-size:13px;color:#a8b3c0}select{font-size:14px}textarea{resize:vertical;min-height:120px}#form-status{font-size:12px;color:var(--accent);margin-top:15px}.message-result{border-top:1px solid var(--line);margin-top:20px;padding-top:8px}.message-result h3{font-size:20px}.message-result p{font-size:12px;color:var(--muted)}.message-result pre{font:12px/1.7 Arial,Helvetica,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;padding:20px;background:#080e14;border:1px solid var(--line);border-radius:6px}.copy-button{font-size:12px;color:var(--text);border:1px solid #57616d;background:transparent;padding:10px 16px;min-height:44px;border-radius:6px}.legal{padding-bottom:65px}.legal h2{font-size:27px}.legal details{max-width:900px}.legal p{max-width:800px}
+@media(hover:hover){.button:hover,.header nav a:last-child:hover{background:#b2f285;border-color:#b2f285}.button.secondary:hover{background:#20303e;border-color:#617282}.purple-button:hover,.price-card:nth-child(n+2) .button:hover{background:#9568d0;border-color:#bb90f4}.header nav a:not(:last-child):hover,.text-link:hover,.footer-links a:hover,.contact-link:hover strong{color:var(--accent)}}
+@media(max-width:1000px){.wrap,.footer{width:calc(100% - 48px)}.header{width:calc(100% - 48px);height:78px}.header nav{gap:20px;font-size:11px}.header .brand img{width:136px;height:46px}.hero{min-height:505px}.hero-copy{padding:40px 28px;max-width:620px}.hero h1{font-size:43px}.hero-points{gap:20px}.hero-image{object-position:60% center}.hero .lead{max-width:370px}.featured-offer{padding:32px;gap:40px}.offer-summary{padding-left:35px}.price-card{padding:28px 23px}.price-card>p{min-height:85px}.delivery-cards{gap:12px}.delivery-cards article{padding:20px}.delivery-cards h3{font-size:16px}.contact-layout{gap:40px}.form-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.hero h1{font-size:38px;max-width:500px}.hero-copy{max-width:570px;padding:35px 25px}.hero-image{opacity:.58;object-position:65% center}.hero .lead{font-size:14px}.hero-points{gap:16px}.hero-points li{padding-left:8px}.hero-points strong{font-size:11px}.hero-points span{font-size:8px}.benefits{gap:14px}.benefits article{padding:20px}.benefits h3{font-size:18px}.benefits p{font-size:12px}.pricing{gap:14px}.price-card{padding:28px 18px}.price-card h2{font-size:22px}.price{font-size:36px}.price-card .check-list li{font-size:11px}.price-card .button{font-size:11px}.delivery-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{gap:10px}.steps li{padding:0 3px}.steps h2,.steps h3{font-size:13px}.steps p{font-size:11px}.featured-offer h2{font-size:28px}.featured-offer{gap:25px}.offer-summary{padding-left:25px}.section{padding-block:55px}.faq-section,.deliverables{gap:40px}.cta{padding:30px}.contact-layout{gap:28px}.contact-aside h2{font-size:27px}.contact-link strong{font-size:13px}}
+@media(max-width:680px){.wrap,.footer{width:calc(100% - 32px)}.header{width:calc(100% - 32px);height:76px;gap:20px}.header .brand img{width:132px;height:44px}.menu-toggle{display:block;min-height:44px;padding:9px 17px;background:#15211a;border:1px solid #3c5c38;border-radius:7px;color:var(--accent);font-size:13px}.header nav{display:none;position:absolute;top:76px;left:0;right:0;background:#101923;padding:17px;border:1px solid #33424c;box-shadow:0 12px 30px #0008;border-radius:0 0 9px 9px;flex-direction:column;align-items:stretch;gap:7px;font-size:14px}.header nav.is-open{display:flex}.header nav a{padding:8px}.header nav a:last-child{justify-content:center;margin-top:5px}.hero{margin-top:15px;display:flex;flex-direction:column;min-height:0;align-items:stretch;border-radius:9px}.hero-copy{padding:28px 22px 15px;order:0;max-width:none}.hero h1{font-size:clamp(29px,7.3vw,43px);line-height:1.2;letter-spacing:-.9px;max-width:590px;margin-bottom:18px}.hero h1 br{display:none}.hero-tag{font-size:9px;padding:4px 9px;max-width:100%;margin-bottom:18px}.hero .lead{font-size:13px;max-width:420px;line-height:1.7}.hero .actions{gap:9px;margin-top:22px}.hero .button{font-size:12px;min-height:44px;padding:10px 14px}.hero-image{position:static;order:1;width:100%;height:250px;object-fit:cover;object-position:right center;opacity:1;margin-top:0}.hero-points{margin-top:25px;gap:15px;flex-wrap:wrap;row-gap:15px}.hero-points strong{font-size:10px}.hero-points span{font-size:8px;line-height:1.4;max-width:100px}.hero-points li{padding-left:7px}.section{padding-block:45px}.section-heading{margin-bottom:23px}.section-heading h2{font-size:27px}.section-heading p:not(.eyebrow){font-size:13px}.eyebrow{font-size:9px;letter-spacing:1px}.benefits{grid-template-columns:1fr;gap:12px}.benefits article{padding:23px}.benefits h3{font-size:20px}.benefits p{font-size:13px}.featured-offer{grid-template-columns:1fr;padding:27px 24px;gap:25px}.featured-offer h2{font-size:29px}.offer-summary{padding:25px 0 0;border-left:0;border-top:1px solid #304536}.offer-summary>strong{font-size:50px}.check-list li{font-size:12px}.steps{grid-template-columns:1fr;margin-top:0;gap:0}.steps li{text-align:left;display:grid;grid-template-columns:38px 1fr;column-gap:18px;padding:0 0 27px;align-items:start}.steps li>span{width:36px;height:36px;grid-row:1/3}.steps li:not(:last-child):after{left:17px;top:40px;height:calc(100% - 45px);width:0;border-top:0;border-left:1px solid #384250}.steps h2,.steps h3{font-size:16px;margin:1px 0 5px}.steps p{font-size:12px}.steps.compact{max-width:370px;margin:auto}.center-action{margin-top:0}.page-intro{padding:38px 5px 32px}.page-intro h1{font-size:30px;line-height:1.2;letter-spacing:-.7px}.page-intro .lead{font-size:13px;max-width:400px}.pricing{grid-template-columns:1fr;gap:23px}.price-card{padding:27px}.price-card h2{font-size:26px}.price-card .eyebrow{font-size:9px}.price{font-size:41px}.price-card>p{min-height:0;font-size:13px}.price-card .check-list li{font-size:12px}.price-card .button{font-size:12px}.recommended{left:24px}.pricing-note{text-align:left;font-size:10px;margin-top:20px}.deliverables{grid-template-columns:1fr;gap:22px}.deliverables h2{font-size:28px}.page-list h3{font-size:19px}.page-list p{font-size:12px}.faq-section{grid-template-columns:1fr;gap:15px;padding-bottom:45px}.faq-section h2{font-size:27px}.delivery-cards{gap:12px}.delivery-cards article{padding:18px}.delivery-cards h3{font-size:16px}.delivery-cards p{font-size:12px}.prep{grid-template-columns:1fr;gap:12px;padding:25px}.prep h2{font-size:27px}.prep p:not(.eyebrow){font-size:13px}.cta{flex-direction:column;align-items:start;padding:27px 24px;gap:20px;margin-bottom:42px}.cta h2{font-size:27px}.cta p:not(.eyebrow){font-size:12px}.cta .button{width:100%}.footer{grid-template-columns:1fr;gap:22px}.footer-links{justify-content:flex-start;padding-top:0;gap:12px 24px}.footer-bottom{flex-direction:column;gap:7px;padding-top:17px}.footer .brand img{width:125px;height:42px}.contact-layout{grid-template-columns:1fr;gap:30px;padding-bottom:40px}.contact-aside h2{font-size:27px}.contact-aside h2 br{display:none}.contact-aside>p:not(.eyebrow){font-size:13px}.contact-link{padding:17px 0}.contact-link strong{font-size:14px}.contact-aside>p.small{font-size:11px}.form-card{padding:25px 20px}.form-card h2{font-size:23px}.message-result .actions>a{width:100%}.legal{padding-bottom:45px}.legal h2{font-size:25px}.legal summary,.faq summary{font-size:13px}details p{font-size:12px}}
+@media(max-width:359px){.hero-copy{padding-inline:17px}.hero h1{font-size:29px}.hero .actions{align-items:stretch;flex-direction:column}.hero-points{gap:12px}.hero-points li{flex-basis:45%}.hero-points li:last-child{flex-basis:100%}.hero-image{height:210px}.price-card{padding:24px}.delivery-cards{grid-template-columns:1fr}.form-card{padding:22px 16px}}
+.brand{position:relative;width:156px;height:52px;overflow:hidden}.footer .brand{width:130px;height:44px}body .brand img,body .header .brand img,body .footer .brand img{position:absolute;width:228%;height:228%;max-width:none;left:-65%;top:-63%;object-fit:fill}@media(max-width:1000px){.header .brand{width:136px;height:46px}}@media(max-width:680px){.header .brand{width:132px;height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+@media(min-width:681px)and(max-width:1000px){.header{gap:14px}.header nav{gap:12px;font-size:10px}.header nav a:last-child{padding-inline:12px}.header .brand{width:124px;height:42px}}
+
+.estimator-offer-link{text-align:center;margin:0 auto 28px}
+
+/* Stripe : essai séparé de l'estimation, montant fixe et données fictives. */
+.stripe-test-panel{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding:32px;border:1px solid #546f45;border-radius:14px;background:#101e1b;margin-block:36px 55px}.stripe-test-panel h2{font-size:clamp(25px,3vw,36px);line-height:1.15;margin:0 0 20px}.stripe-test-panel p{font-size:13px;line-height:1.8;color:#c7d5d1;max-width:580px}.stripe-test-panel strong{color:#e3f5d8}.stripe-test-panel .button{margin-top:10px;white-space:normal;text-align:center}.stripe-test-panel .small{font-size:11px}.stripe-test-instructions{padding:25px;background:#0b1518;border:1px solid #3b4f46;border-radius:10px}.stripe-test-instructions h3{font-size:18px;margin:0 0 15px}.stripe-test-instructions code{display:inline-block;font-size:16px;letter-spacing:.4px;color:#c7f3a7;overflow-wrap:anywhere;max-width:100%}@media(max-width:680px){.stripe-test-panel{grid-template-columns:1fr;gap:20px;padding:24px 20px}.stripe-test-instructions{padding:22px 18px}.stripe-test-panel .button{width:100%}}
+
+.ai-use-cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:25px 0}.ai-use-cases p{padding:20px;background:#111c29;border:1px solid #344052;border-radius:10px;color:var(--muted);font-size:13px}.ai-use-cases strong{display:block;color:var(--text);margin-bottom:8px}.ai-pricing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.ai-pricing .price-card{display:flex;flex-direction:column;min-width:0}.ai-pricing .price-card h3{font-size:25px;margin-top:12px}.ai-pricing .price-card .button{margin-top:auto}.ai-pricing .price-card .small{font-size:12px;color:var(--muted)}.ai-terms{padding:20px;border:1px solid #35425a;border-radius:10px}.ai-terms p{color:var(--muted);font-size:13px;margin-top:16px}.ai-offers{scroll-margin-top:30px}@media(max-width:680px){.ai-use-cases,.ai-pricing{grid-template-columns:minmax(0,1fr)}.ai-pricing .price-card{padding:24px}}
+
+/* Habillage uniquement : ne modifie ni formulaires, ni routes, ni tarifs. */
+:root{--bg:#050505;--text:#f5f5f7;--muted:#a1a1aa;--accent:#00d69a;--purple:#9254ff;--line:#26262d;color:#f5f5f7;background:#050505}
+.desktop-shell{background:#050505}
+.desktop-shell .wallpaper{z-index:-4;filter:brightness(.6) saturate(.8);opacity:.85;object-position:64% center}
+.desktop-shell[data-wallpaper="coast"]:not(.has-webgl) .wallpaper{animation-name:koralya-wallpaper-drift;animation-duration:32s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}
+.desktop-shell.has-webgl[data-wallpaper="coast"] .wallpaper{opacity:.1;animation:none}
+.desktop-shell.is-still .wallpaper,.desktop-shell.is-background-hidden .wallpaper{animation-play-state:paused}
+@keyframes koralya-wallpaper-drift{from{transform:scale(1.035) translate(-.5%,-.3%)}to{transform:scale(1.065) translate(.5%,.3%)}}
+.desktop-scene{z-index:-3;opacity:.82;pointer-events:none;mask-image:linear-gradient(to bottom,#000 0%,#000 68%,transparent 99%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 68%,transparent 99%)}
+.desktop-shell::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,#050505fa 0%,#050505eb 26%,#050505b0 42%,#05050530 61%,#05050520 78%,#050505aa 100%)}
+.desktop-shell::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to bottom,transparent 38%,#05050522 61%,#050505b8 86%,#050505f5 100%)}
+.desktop-menubar{background:#050505d9;border-color:#f5f5f71a;backdrop-filter:blur(14px)}
+.desktop-brand span,.desktop-version,.desktop-menubar time{color:#a1a1aa}
+.desktop-dashboard{max-width:1500px;column-gap:48px;grid-template-rows:minmax(590px,calc(100dvh - 185px)) auto auto}
+.desktop-welcome{max-width:660px;align-self:center;padding-block:40px}
+.desktop-welcome h1{font-size:clamp(38px,4.2vw,62px);line-height:1.08;letter-spacing:-2px;max-width:660px;text-wrap:balance;text-shadow:0 2px 20px #000}
+.desktop-welcome>p:not(.desktop-eyebrow){color:#d2d2d9;max-width:435px;font-size:15px;line-height:1.75}
+.desktop-eyebrow{color:#00d69a}.desktop-primary{color:#041710;background:#00d69a;border-color:#00d69a}.desktop-primary:hover{background:#32e4b2}
+.desktop-secondary{background:#0d0d10dc;border-color:#f5f5f733;color:#f5f5f7}.desktop-secondary:hover{background:#1a1a20}
+.desktop-welcome-facts{color:#c7c7cf}.desktop-welcome-facts li{border-color:#00d69a}
+.desktop-ad-card{background:#0d0d10f5;border:1px solid #00d69a38;box-shadow:0 12px 40px #0008;max-width:310px;justify-self:end;align-self:end;margin-bottom:24px;transform:none!important;padding:16px 18px;border-radius:18px}
+.desktop-ad-card h2{font-size:19px;line-height:1.25;transform:none}.desktop-ad-card>.desktop-primary{transform:none;background:#00d69a;border-color:#00d69a}
+.desktop-ad-card .ad-price strong{color:#00d69a;font-size:30px}.desktop-ad-card>p.ad-benefit{color:#d5c0ff;border-color:#9254ff55;background:#9254ff12;padding:5px 7px}
+.desktop-ad-card .ad-visual{display:none}.ad-offer-switch{background:#050505;border-color:#ffffff1c}.ad-offer-switch button[aria-pressed="true"]{background:#00d69a}
+.desktop-presentation,.desktop-dialog{background:#0d0d10f7;border-color:#f5f5f724;box-shadow:0 18px 60px #0007}
+.presentation-offer,.presentation-deliverables,.presentation-marketing,.desktop-offer-grid article{background:#0d0d10f5;border-color:#f5f5f721}
+.presentation-amount,.presentation-followup,.desktop-offer-grid strong{color:#00d69a}
+.desktop-dock{background:#0d0d10ed;border-color:#f5f5f72b;box-shadow:0 8px 24px #0007}
+.price-card,.form-card,.estimate-summary{background:#0d0d10f7;border-color:#ffffff25}
+.price-card.featured{border-color:#00d69a85}.price,.offer-summary>strong{color:#00d69a}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#050505f5,#050505d9 35%,#05050555 65%,#05050555)}
+.hero-copy{z-index:1}.hero-image{opacity:.78}.hero{background:#050505;border-color:#ffffff1c}
+/* Même emplacement, sans habillage de fenêtre ni barre de commandes. */
+.desktop-shell .app-window.integrated-page{grid-template-rows:minmax(0,1fr);border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;transform:none}
+.desktop-shell .app-window.integrated-page iframe{background:transparent}
+@media(max-width:1050px){.desktop-dashboard{column-gap:20px}.desktop-welcome h1{font-size:46px}.desktop-ad-card{max-width:280px}}
+@media(max-width:700px){.desktop-scene{opacity:.30;mask-image:linear-gradient(to bottom,#0008,transparent 80%)}.desktop-shell::before{background:#05050594}.desktop-shell::after{background:linear-gradient(to bottom,transparent,#050505db 75%)}.desktop-shell .wallpaper{object-position:65% center}.desktop-welcome h1{font-size:39px;line-height:1.08}.desktop-welcome{padding-block:10px}.desktop-ad-card{justify-self:stretch;max-width:none}.desktop-presentation{background:#0d0d10fa}.desktop-welcome>p:not(.desktop-eyebrow){font-size:14px}}
+@media(prefers-reduced-motion:reduce){.desktop-scene{opacity:.6}.desktop-shell .wallpaper{animation:none!important}.desktop-ad-card{transition:none}}
+</style><style></style><noscript><style>@media(max-width:680px){.header{height:auto;flex-wrap:wrap;padding-block:15px}.header nav{display:flex;position:static;width:100%;flex-direction:row;flex-wrap:wrap}.menu-toggle{display:none}}</style></noscript><style>
+.seo-public-page{position:relative;isolation:isolate;background:transparent;min-height:100dvh}.seo-wallpaper,.seo-scene{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-3;object-fit:cover;opacity:.2}.seo-scene{z-index:-2;opacity:.38}.seo-public-page.has-webgl .seo-wallpaper{opacity:.06}.seo-public-page::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg,#050505f5,#050505c9 45%,#05050580)}.seo-public-page .header,.seo-public-page .footer{position:relative}.seo-background-controls{display:flex;justify-content:flex-end;padding-top:12px}#seo-motion{min-height:44px;background:#0d1711;color:#bde9d3;border:1px solid #446451;border-radius:7px;padding:9px 12px;font:12px/1.5 Arial;cursor:pointer}#seo-motion:focus-visible{outline:3px solid #a87cff;outline-offset:4px}.seo-public-page .footer{margin-top:25px}@media(prefers-reduced-motion:reduce){.seo-scene{opacity:.25}}
+</style><title>Estimer votre site web ou outil IA | Koralya Studio</title><meta name="description" content="Estimez votre projet Koralya : sites web et outils IA personnalisés, options et coûts mensuels séparés. Préparez votre demande, sans commande automatique."><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="Estimer votre site web ou outil IA | Koralya Studio"><meta property="og:description" content="Estimez votre projet Koralya : sites web et outils IA personnalisés, options et coûts mensuels séparés. Préparez votre demande, sans commande automatique."><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Koralya Studio"><meta property="og:url" content="https://koralyastudio.contactkoralyastudio.workers.dev/devis/"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#organization", "name": "Koralya Studio", "url": "https://koralyastudio.contactkoralyastudio.workers.dev/"}, {"@type": "WebSite", "@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#website", "name": "Koralya Studio", "url": "https://koralyastudio.contactkoralyastudio.workers.dev/", "inLanguage": "fr", "publisher": {"@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#organization"}}, {"@type": "WebPage", "@id": "https://koralyastudio.contactkoralyastudio.workers.dev/devis/#webpage", "url": "https://koralyastudio.contactkoralyastudio.workers.dev/devis/", "name": "Estimer votre site web ou outil IA | Koralya Studio", "description": "Estimez votre projet Koralya : sites web et outils IA personnalisés, options et coûts mensuels séparés. Préparez votre demande, sans commande automatique.", "inLanguage": "fr", "isPartOf": {"@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#website"}}]}</script></head>
+<body id="desktop-shell" class="seo-public-page estimateur-page"><img class="seo-wallpaper" src="/assets/2de10bc057be4461.jpg" alt="" width="1672" height="941"><canvas id="desktop-scene" class="seo-scene" aria-hidden="true"></canvas><a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="header"><a class="brand" href="https://koralyastudio.contactkoralyastudio.workers.dev/" aria-label="Koralya, accueil"><img src="/assets/faaa33559b838f8e.webp" alt="Koralya Studio" width="156" height="52"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+    <nav id="navigation" aria-label="Navigation principale"><a href="https://koralyastudio.contactkoralyastudio.workers.dev/">Accueil</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/offres/">Offres & tarifs</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/">Notre méthode</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/marketing/">Marketing</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/" aria-current="page">Estimer</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Demander un devis</a></nav></header><style>.estimator-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:start;margin-bottom:40px}.estimator-form-card h2{font-size:25px}.estimator-form-card>form>h3{font-size:19px}.estimator-form-card select{margin-bottom:10px}.estimator-form-card form>p.small{font-size:11px;margin-bottom:22px}.estimate-options{padding:18px 0 6px;border:0;border-top:1px solid var(--line);margin:24px 0}.estimate-options legend{font-size:13px;font-weight:600;padding:0 10px 0 0}.estimate-checkbox{display:flex;align-items:start;gap:12px;margin:0 0 20px;cursor:pointer}.estimate-checkbox input{width:19px;height:19px;min-height:0;flex-shrink:0;margin:3px 0 0;padding:0;accent-color:var(--accent)}.estimate-checkbox strong{font-size:13px;font-weight:500;color:#e1e7ef}.estimate-checkbox small{display:block;color:#aebed0;font-size:11px;line-height:1.7;margin-top:4px}.estimator-form-card .form-grid{grid-template-columns:1fr 1fr}.estimator-form-card .form-grid .small{margin:-8px 0 20px}.estimate-divider{border:0;border-top:1px solid var(--line);margin:5px 0 26px}.estimate-summary{padding:30px;border:1px solid #4f4165;background:#171e2d;border-radius:11px;position:sticky;top:22px}.estimate-summary h2{font-size:24px}.estimate-lines{margin:0 0 22px}.estimate-lines>div{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #334154;padding:13px 0;font-size:12px}.estimate-lines dt{color:#bfcbda}.estimate-lines dd{margin:0;text-align:right;white-space:nowrap}.estimate-total{border:1px solid #40613b;background:#13271d;border-radius:9px;padding:21px;margin-bottom:18px}.estimate-total>span{display:block;color:#c8d9be;font-size:11px}.estimate-total strong{display:block;font-size:35px;font-weight:600;color:var(--accent);margin-top:6px;line-height:1.3}.estimate-monthly>div{display:flex;justify-content:space-between;gap:20px;margin:13px 0;font-size:11px}.estimate-monthly>div>span{color:#b6c6d6}.estimate-monthly strong{white-space:nowrap;font-size:12px;font-weight:500}.estimate-scenario{border-top:1px solid #3b3a52;margin-top:22px;padding-top:20px}.estimate-scenario h3{font-size:16px;margin:0 0 10px}.estimate-scenario>p:not(.small){font-size:14px;color:#d8c3f6}.estimate-limits{font-size:11px;color:#b3c2d3;line-height:1.8}.estimate-summary>.copy-button{width:100%;margin:10px 0 16px}.estimate-text-details summary{font-size:11px;color:#c7d5e4}.estimate-summary pre,.estimate-request pre{font:12px/1.75 Arial,Helvetica,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;background:#0a1520;border:1px solid #34465a;padding:18px;border-radius:8px}.estimate-summary>.small{font-size:10px;margin:18px 0 0}.estimate-request{padding:28px;border:1px solid #40553a;border-radius:10px;background:#101f1b;margin-bottom:35px;scroll-margin-top:25px}.estimate-request h2{font-size:25px}.estimate-request>p{font-size:13px;color:#bdc9d3}#estimate-status{font-size:12px;color:var(--accent);margin:15px 0 0}.estimator-faq{margin-bottom:55px}.estimator-faq details{border-top:1px solid var(--line);padding:17px 0}.estimator-faq details:last-child{border-bottom:1px solid var(--line)}.estimator-offer-link{text-align:center;margin-bottom:35px}.estimator-offer-link p{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.estimator-layout{gap:22px}.estimate-summary{padding:24px}.estimate-summary h2{font-size:22px}.estimator-form-card .form-grid{grid-template-columns:1fr}.estimate-monthly>div{flex-wrap:wrap;gap:6px}.estimate-total strong{font-size:31px}}
+@media(max-width:680px){.estimator-layout{grid-template-columns:1fr;gap:22px}.estimate-summary{position:static;padding:25px}.estimator-form-card .button{width:100%}.estimate-total strong{font-size:35px}.estimate-monthly>div{flex-wrap:nowrap;gap:16px}.estimate-request{padding:23px 20px}.estimate-request h2{font-size:23px}.estimate-request .actions{flex-direction:column;align-items:stretch}.estimator-faq{margin-bottom:40px}.estimator-faq summary{font-size:13px}}
+</style><style>/* Présentation des outils uniquement. Les calculs et les envois restent dans leurs modules. */
+:is(.estimateur-page,.marketing-page,.contact-page){--journey-muted:#bdc7c3;--journey-line:#ffffff25;color:#f5f5f7}
+.journey-intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(180px,.8fr);gap:40px;align-items:center;padding-block:48px 38px}
+.journey-intro-copy{min-width:0}.journey-intro h1{font-size:clamp(32px,4vw,50px);line-height:1.1;letter-spacing:-.035em;text-wrap:balance;margin:0 0 20px;max-width:730px}
+.journey-intro h1 em{font-style:normal;color:#60e4bc}.journey-intro .lead{max-width:600px;color:var(--journey-muted);font-size:15px;line-height:1.8;margin:0}
+.journey-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:30px 0 0;padding:0;list-style:none;max-width:690px}
+.journey-map li{position:relative;display:flex;flex-direction:column;gap:12px;min-width:0}
+.journey-map li:not(:last-child)::after{content:"";position:absolute;height:1px;left:38px;right:-9px;top:14px;background:linear-gradient(90deg,#5c8977,#ffffff15)}
+.journey-number{display:grid;place-items:center;width:28px;height:28px;border:1px solid #47836b;color:#8de9c4;border-radius:50%;font-size:10px;font-variant-numeric:tabular-nums}
+.journey-map strong{display:block;font-size:13px;font-weight:600;margin-bottom:4px}.journey-map li>div>span{font-size:11px;color:var(--journey-muted);line-height:1.6;display:block;max-width:160px}
+.journey-visual{position:relative;display:flex;align-items:center;flex-direction:column;justify-content:center;min-width:0;perspective:900px}
+.journey-art{display:block;width:min(100%,340px);aspect-ratio:1;background-image:url("/assets/0d27f7579d10c9f3.webp");background-size:300% 200%;background-position:0% 0%;background-repeat:no-repeat;pointer-events:none;flex-shrink:0}
+.journey-art[data-art="maquette"]{background-position:50% 0%}.journey-art[data-art="creation"]{background-position:100% 0%}.journey-art[data-art="validation"]{background-position:0% 100%}.journey-art[data-art="livraison"]{background-position:50% 100%}.journey-art[data-art="preparation"]{background-position:100% 100%}
+.journey-motion{font:inherit;font-size:11px;min-height:44px;padding:9px 13px;border:1px solid #ffffff30;border-radius:7px;background:#080e0cb8;color:#c4d8cf;cursor:pointer}
+.journey-motion:hover{border-color:#00d69a;background:#12241b}.journey-motion[aria-pressed="true"]{color:#8de9c4}
+.journey-intro.is-in-view .journey-visual>.journey-art{animation:journey-float 9s ease-in-out infinite}
+.journey-paused .journey-visual>.journey-art,.journey-hidden .journey-visual>.journey-art{animation-play-state:paused}
+@keyframes journey-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card{background:#0b100fe8;border:1px solid var(--journey-line);border-radius:16px;padding:32px;min-width:0;box-shadow:0 18px 34px #0003}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card h2{font-size:24px;letter-spacing:-.025em;line-height:1.25;margin-bottom:12px}
+.journey-form-lead,.marketing-brief form>p,.contact-page #project-form>p:first-of-type{font-size:13px;line-height:1.7;color:var(--journey-muted);margin-bottom:24px}
+.journey-group{min-width:0;border:0;border-top:1px solid var(--journey-line);margin:30px 0 0;padding:25px 0 0}
+.journey-group legend{padding:0 12px 0 0;font-size:14px;line-height:1.6;color:#f5f5f7;font-weight:600;max-width:100%}
+.journey-group legend>span{display:inline-flex;justify-content:center;align-items:center;width:25px;height:25px;margin-right:10px;border:1px solid #3d6c58;border-radius:7px;background:#12302180;color:#9df1cd;font-size:11px;font-weight:500}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card :is(input,select,textarea):not([type="checkbox"]){background:#080e0d;border:1px solid #52615b;color:#f5f5f7;min-height:49px;border-radius:8px;font-size:14px;line-height:1.5;padding:12px 13px;max-width:100%;transition:border-color .15s ease-out}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card ::placeholder{color:#a8b9b0;opacity:1}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card :is(input,select,textarea):disabled{color:#8c9993;background:#111715;opacity:.65;cursor:not-allowed}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card label{color:#dce6df;font-size:13px;line-height:1.65}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card label>span:not(:has(strong)){color:#b3c2b8}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card :is(input,select,textarea):focus-visible{outline:2px solid #a77aff;outline-offset:3px;border-color:#a77aff}
+:is(.estimateur-page,.marketing-page,.contact-page) :is(.journey-motion,.journey-shortcuts button):focus-visible{outline:3px solid #a77aff;outline-offset:4px}
+:is(.estimateur-page,.marketing-page,.contact-page) .form-card .small{font-size:11px;color:var(--journey-muted);line-height:1.8}
+:is(.estimateur-page,.marketing-page,.contact-page) form>.button{margin-top:24px;min-height:48px;font-size:13px}
+.journey-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--journey-line);margin-top:22px}
+.journey-shortcuts button{font:inherit;text-align:left;display:flex;flex-direction:column;gap:7px;min-width:0;padding:18px 12px;background:transparent;color:#e4ede8;border:0;border-bottom:2px solid transparent;cursor:pointer}
+.journey-shortcuts button+button{border-left:1px solid var(--journey-line)}
+.journey-shortcuts button>span{font-size:12px;font-weight:500}.journey-shortcuts strong{font-size:24px;line-height:1.3;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.journey-shortcuts small{font-size:10px;line-height:1.6;color:#bdc7c3;font-weight:400}.journey-shortcuts strong small{font-size:11px}
+.journey-shortcuts button:hover{background:#00d69a08}.journey-shortcuts button[aria-pressed="true"]{border-bottom-color:#00d69a;background:#00d69a0c}.journey-shortcuts button[aria-pressed="true"] strong{color:#76e7bd}
+.journey-shortcut-note{margin:13px 0 20px}
+.estimateur-page .estimator-layout{grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:32px}
+.estimateur-page .estimate-options{padding:25px 0 0}.estimateur-page .estimate-checkbox{gap:12px;padding:12px 0;margin:0 0 9px}
+.estimateur-page .estimate-checkbox input{accent-color:#00d69a;width:21px;height:21px;min-height:21px;margin-top:2px}.estimateur-page .estimate-checkbox small{color:var(--journey-muted);font-size:12px}
+.estimateur-page .estimate-options>.form-grid{margin-top:19px}.estimateur-page .estimator-form-card .form-grid{grid-template-columns:1fr}
+.estimateur-page .estimate-summary{background:#0d1612f5;border-color:#5a89704d;border-radius:16px;padding:28px;top:20px}
+.journey-summary-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#7ce6b9;background:#1d49324d;margin-bottom:17px;font-size:20px}
+.estimateur-page .estimate-summary h2{font-size:23px;letter-spacing:-.02em}.estimateur-page .estimate-total{background:#15332394;border-color:#43755b8c}.estimateur-page .estimate-total strong{color:#7aebbd;font-size:38px}
+.estimateur-page .estimate-monthly>div{font-size:12px;line-height:1.7;padding-block:8px;border-bottom:1px solid var(--journey-line);margin:0}.estimateur-page .estimate-summary :is(dt,.small,.estimate-limits){color:var(--journey-muted)}
+.estimateur-page .estimate-lines>div{border-color:var(--journey-line)}.estimateur-page .estimate-scenario{border-color:var(--journey-line)}
+.marketing-page .marketing-layout{grid-template-columns:minmax(230px,.7fr) minmax(0,1.3fr);gap:42px;align-items:start}
+.marketing-page .marketing-offer{position:sticky;top:20px;background:#0d0d10d9;border:0;border-left:2px solid #9254ff;padding:0 27px 24px;border-radius:0;overflow:visible}
+.marketing-page .marketing-offer h2{font-size:25px;line-height:1.3;letter-spacing:-.02em}.marketing-page .marketing-price{color:#c3a5ff;font-size:44px;letter-spacing:-.035em;margin-block:18px 24px}
+.marketing-page .marketing-offer>p:not(.marketing-price),.marketing-page .marketing-boundary p{font-size:12px;line-height:1.85;color:var(--journey-muted)}
+.journey-offer-art{width:128px;margin:-12px 0 8px}.marketing-page .marketing-boundary{background:transparent;padding:22px 0 0;border-top:1px solid var(--journey-line);border-radius:0}.marketing-page .marketing-boundary h3{font-size:16px}
+.marketing-page .marketing-brief .form-grid{grid-template-columns:1fr 1fr;gap:18px}.marketing-page .marketing-result{background:#0b1411f0;border-color:#48735a}
+.marketing-page .marketing-week{background:transparent;border:0;border-top:1px solid #48735a;padding-inline:0;border-radius:0}.marketing-page .marketing-weeks{gap:30px}
+.contact-page .contact-layout{grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:55px;align-items:start}
+.contact-page .contact-aside{padding-top:24px}.contact-page .contact-aside h2{font-size:28px;line-height:1.25;letter-spacing:-.025em}.contact-page .contact-aside>p{color:var(--journey-muted);line-height:1.8}
+.contact-page .contact-link{position:relative;padding:22px 30px 22px 0;border-color:var(--journey-line);transition:padding-left .2s ease-out}.contact-page .contact-link:hover{padding-left:8px}.contact-page .contact-link::after{content:"";position:absolute;right:6px;top:50%;width:9px;height:9px;border-top:1.5px solid #73dfb3;border-right:1.5px solid #73dfb3;transform:rotate(45deg)}
+.contact-page .contact-link strong{font-size:15px;overflow-wrap:anywhere;color:#edf5ef}.contact-page .contact-link span{color:#b4c8bd;font-size:12px}
+.contact-page .contact-layout .form-grid{grid-template-columns:1fr 1fr;gap:18px}.contact-page .message-result{border-color:#438260}
+:is(.estimateur-page,.marketing-page,.contact-page) :is(.estimate-request,.marketing-result,.message-result){scroll-margin-top:25px}
+@media(min-width:1400px){.journey-intro{gap:85px}.journey-visual .journey-art{width:360px}}
+@media(max-width:1000px){.journey-intro{gap:15px;grid-template-columns:minmax(0,1.5fr) minmax(160px,.7fr)}.journey-map{gap:14px}.journey-intro h1{font-size:39px}.marketing-page .marketing-layout,.contact-page .contact-layout{gap:28px}.marketing-page .marketing-brief .form-grid,.contact-page .contact-layout .form-grid{grid-template-columns:1fr}.estimateur-page .estimator-layout{gap:20px}.estimateur-page .estimate-summary{padding:22px}.journey-shortcuts button{padding-inline:8px}.journey-shortcuts strong{font-size:21px}}
+@media(max-width:760px){.journey-intro{grid-template-columns:1fr;gap:10px;padding-block:30px}.journey-intro h1{font-size:clamp(32px,6vw,43px)}.journey-intro .lead{font-size:14px}.journey-visual{flex-direction:row;gap:8px;justify-content:flex-start}.journey-visual>.journey-art{width:132px}.journey-motion{max-width:160px;text-align:left}.journey-map{margin-top:24px;gap:14px}.journey-map li>div>span{font-size:11px}.journey-map strong{font-size:12px}.estimateur-page .estimator-layout,.marketing-page .marketing-layout,.contact-page .contact-layout{grid-template-columns:1fr;gap:28px}.estimateur-page .estimate-summary,.marketing-page .marketing-offer{position:static}.marketing-page .marketing-offer{padding-top:10px;padding-left:22px}.journey-offer-art{float:right;width:112px;margin:0 0 10px 10px}.marketing-page .marketing-offer h2{max-width:250px}.contact-page .contact-aside{padding-top:0}.contact-page .contact-aside h2 br{display:none}.contact-page .contact-layout .form-grid{grid-template-columns:1fr 1fr}.journey-shortcuts strong{font-size:23px}}
+@media(max-width:480px){:is(.estimateur-page,.marketing-page,.contact-page) .form-card{padding:25px 18px;border-radius:12px}.journey-intro h1{font-size:34px}.journey-group{margin-top:24px}.journey-map{gap:10px}.journey-map li{gap:10px}.journey-map li>div>span{font-size:10px}.journey-shortcuts{grid-template-columns:1fr}.journey-shortcuts button{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 10px;padding:14px 10px}.journey-shortcuts button>small{grid-column:1;grid-row:2}.journey-shortcuts button>strong{grid-column:2;grid-row:1/3;align-self:center}.journey-shortcuts button+button{border-left:0;border-top:1px solid var(--journey-line)}.journey-shortcuts button[aria-pressed="true"]{border-bottom-color:transparent;box-shadow:inset 2px 0 #00d69a}.contact-page .contact-layout .form-grid{grid-template-columns:1fr}.marketing-page .marketing-weeks{grid-template-columns:1fr}.journey-group legend{font-size:13px}.contact-page .contact-link strong{font-size:14px}:is(.estimateur-page,.marketing-page,.contact-page) form>.button{width:100%}}
+@media(prefers-reduced-motion:reduce){.journey-visual>.journey-art{animation:none!important}.journey-motion{display:none}.journey-shortcuts button,.contact-page .contact-link,.form-card :is(input,select,textarea){transition:none!important}}
+</style><div class="wrap seo-background-controls"><button id="seo-motion" type="button" aria-pressed="false" hidden>Mettre le fond en pause</button></div><main id="contenu"><section class="wrap journey-intro" data-journey><div class="journey-intro-copy"><h1>Préparez votre projet,<br><em>en clair.</em></h1><p class="lead">Choisissez une prestation et vos options pour obtenir une estimation détaillée, puis préparer une demande à Koralya.</p><ol class="journey-map" aria-label="Comment utiliser cet outil"><li><span class="journey-number">01</span><div><strong>Choisir</strong><span>Votre prestation et ses options</span></div></li><li><span class="journey-number">02</span><div><strong>Estimer</strong><span>Le ponctuel et le mensuel séparés</span></div></li><li><span class="journey-number">03</span><div><strong>Échanger</strong><span>Une demande à relire avant l’envoi</span></div></li></ol></div><div class="journey-visual"><span class="journey-art" data-art="preparation" aria-hidden="true"></span><button type="button" class="journey-motion" data-journey-pause aria-pressed="false" hidden>Mettre l’illustration en pause</button></div></section>
+<section class="wrap estimator-layout"><div class="form-card estimator-form-card"><form id="estimate-form"><h2>Mon projet</h2><p class="journey-form-lead">Commencez par le format. Le récapitulatif se met à jour avec vos choix.</p><div class="journey-shortcuts" role="group" aria-label="Choisir rapidement une prestation web"><button type="button" data-journey-offer="express" aria-pressed="false"><span>Page express</span><strong>100 €</strong><small>Une page sur modèle</small></button><button type="button" data-journey-offer="vitrine" aria-pressed="true"><span>Site vitrine</span><strong>590 €</strong><small>Jusqu’à 4 pages · 3 mois de suivi offerts</small></button><button type="button" data-journey-offer="refonte" aria-pressed="false"><span>Refonte ciblée</span><strong><small>Dès</small> 390 €</strong><small>Pour un site existant</small></button></div><p class="small journey-shortcut-note">Les outils IA et les autres formats sont aussi disponibles dans la liste ci-dessous. Montants indicatifs, sauf la vitrine à 590 € au total, TVA comprise si applicable.</p><fieldset class="journey-group"><legend><span aria-hidden="true">1</span>Le format et les pages</legend><label for="estimate-service">La prestation qui m’intéresse</label><select id="estimate-service" required><option value="express">Page express · 100 €</option><option value="vitrine" selected>Site vitrine jusqu’à 4 pages · 590 € au total · 3 mois de suivi offerts</option><option value="refonte">Refonte ciblée · dès 390 €</option><option value="ia_atelier">Atelier IA · 49 € indicatifs</option><option value="ia_essentiel">Outil IA Essentiel · dès 99 € indicatifs</option><option value="ia_plus">Outil IA Plus · dès 199 € indicatifs</option><option value="ia_projet">Outil IA Projet · dès 390 € indicatifs</option></select><p id="estimate-service-note" class="small"></p><label for="estimate-pages">Pages supplémentaires</label><select id="estimate-pages"><option value="0">Aucune</option><option value="1">1 page · 70 €</option><option value="2">2 pages · 140 €</option><option value="3">3 pages · 210 €</option><option value="4">4 pages · 280 €</option></select><p class="small">Cette option s’applique uniquement au site vitrine. Au-delà de quatre pages supplémentaires : devis spécifique.</p></fieldset><fieldset class="estimate-options journey-group"><legend><span aria-hidden="true">2</span>Les accompagnements facultatifs</legend><label class="estimate-checkbox" for="estimate-maintenance"><input id="estimate-maintenance" type="checkbox"><span><strong>Maintenance légère · 25 €/mois</strong><small>Une petite mise à jour de contenu, jusqu’à 30 minutes par mois, sans report.</small></span></label><label class="estimate-checkbox" for="estimate-marketing"><input id="estimate-marketing" type="checkbox"><span><strong>Marketing · 129 €/mois</strong><small>Un canal, jusqu’à deux heures par mois et un compte rendu. Budget publicitaire séparé.</small></span></label><div class="form-grid"><div><label for="estimate-ad-budget">Budget publicitaire séparé (€ / mois)</label><input id="estimate-ad-budget" type="number" value="0" min="0" max="10000" step="1" disabled><p class="small">Facultatif avec le marketing, payé séparément aux régies.</p></div><div><label for="estimate-months">Durée à simuler <span>(facultatif)</span></label><input id="estimate-months" type="number" min="1" max="120" step="1" placeholder="Nombre de mois"><p class="small">Une simulation, pas une durée d’engagement.</p></div></div></fieldset><fieldset class="journey-group"><legend><span aria-hidden="true">3</span>Votre demande de devis</legend><label for="estimate-activity">Votre activité ou usage</label><input id="estimate-activity" required minlength="2" maxlength="120" placeholder="Ex. : boutique, artisan, conseil…"><label for="estimate-details">Votre besoin <span>(facultatif)</span></label><textarea id="estimate-details" maxlength="600" rows="3" placeholder="La tâche à simplifier, le résultat attendu, vos contenus ou votre site actuel…"></textarea></fieldset><button class="button" type="submit">Préparer ma demande de devis</button><p id="estimate-status" role="status" aria-live="polite"></p></form></div>
+<aside class="estimate-summary" aria-labelledby="estimate-summary-title"><span class="journey-summary-mark" aria-hidden="true">€</span><h2 id="estimate-summary-title">Le détail de mon projet</h2><dl id="estimate-lines" class="estimate-lines"></dl><div class="estimate-total"><span id="estimate-once-label">Base ponctuelle estimée</span><strong id="estimate-once" aria-live="polite">—</strong></div><div class="estimate-monthly"><div><span>Accompagnements facultatifs</span><strong id="estimate-monthly">0 € / mois</strong></div><div><span>Budget publicitaire séparé</span><strong id="estimate-ad-total">0 € / mois</strong></div></div><section class="estimate-scenario"><h3>Simulation sur une durée</h3><p id="estimate-scenario-value">Choisissez une durée pour simuler un sous-total.</p><p class="small">Sous-total des montants connus uniquement. Les frais initiaux et autres frais éventuels restent à préciser.</p></section><p class="estimate-limits">Tarifs indicatifs. Prix final et TVA à préciser au devis. Abonnements IA et consommation sont séparés. Domaine, hébergement, licences, images et interventions externes sont exclus sauf mention au devis. Frais initiaux, engagement, renouvellement et résiliation des accompagnements restent à définir.</p><button id="estimate-download" class="copy-button" type="button">Télécharger l’estimation</button><details class="estimate-text-details"><summary>Consulter l’estimation en texte</summary><pre id="estimate-text"></pre></details><p class="small">L’estimateur ne crée aucune commande, souscription ou facture. Une simulation Stripe distincte est disponible ci-dessous, sans paiement réel.</p></aside></section>
+<section id="estimate-request" class="wrap estimate-request" hidden aria-labelledby="estimate-request-title"><h2 id="estimate-request-title">Votre demande est prête à relire.</h2><p>Aucun message n’a été envoyé. Choisissez votre application puis confirmez l’envoi vous-même.</p><pre id="estimate-message"></pre><div class="actions"><a id="estimate-whatsapp" class="button" target="_blank" rel="noopener noreferrer">Continuer sur WhatsApp</a><a id="estimate-email" class="button secondary">Ouvrir mon e-mail</a></div></section>
+<section class="wrap estimator-faq"><details><summary>Cette estimation est-elle un devis définitif ?</summary><p>Non. Le prix final dépend du périmètre, des contenus, de la TVA applicable et des éventuels frais à préciser. Une refonte reste une base « à partir de ». Un devis doit être validé avant de commencer.</p></details><details><summary>Les options mensuelles créent-elles un abonnement ?</summary><p>Non. Elles servent à discuter du besoin. La durée simulée ne fixe aucun engagement et les conditions doivent figurer au devis. Le budget publicitaire est distinct des honoraires.</p></details><details><summary>Qu’en est-il de mes informations ?</summary><p>L’estimation et votre activité restent dans cet onglet, sans envoi ni sauvegarde après rechargement. Vous pouvez télécharger le texte ou choisir volontairement d’ouvrir votre application de messagerie.</p></details></section>
+
+<section class="wrap stripe-test-panel" aria-labelledby="stripe-test-title"><div><p class="eyebrow">STRIPE · MODE TEST</p><h2 id="stripe-test-title">Essayez le paiement,<br>sans débit réel.</h2><p><strong>590 € simulés</strong> pour le site vitrine jusqu’à quatre pages, avec <strong>3 mois de suivi offerts</strong>.</p><p>Cette simulation porte sur l’offre vitrine de base. Les options de votre estimation ne sont pas incluses. Aucun abonnement ni commande réelle n’est créé.</p><a class="button" href="https://buy.stripe.com/test_fZu28s6xx1S8cRj8R3fjG00" target="_blank" rel="noopener noreferrer">Tester le paiement de 590 € <span aria-hidden="true">↗</span></a><p class="small">La page de paiement Stripe s’ouvre dans un nouvel onglet. Utilisez uniquement des informations fictives.</p></div><aside class="stripe-test-instructions" aria-label="Comment essayer le paiement"><h3>Une carte fictive pour essayer</h3><p>Numéro de test :<br><code>4242 4242 4242 4242</code></p><p>Date : <strong>12/34</strong><br>Code CVC : <strong>123</strong><br>Nom et e-mail : des données fictives.</p><p>Sur Stripe, vérifiez le mode test et le montant de 590 € avant de confirmer. Aucune carte réelle n’est nécessaire.</p><p class="small">L’offre vitrine de base est à 590 € au total, TVA comprise si applicable. Le détail de la TVA et les options figurent au devis. Les trois mois de suivi offerts ne déclenchent aucun abonnement à leur terme.</p></aside></section>
+
+</main><footer class="footer"><div><a class="brand" href="https://koralyastudio.contactkoralyastudio.workers.dev/"><img src="/assets/faaa33559b838f8e.webp" alt="Koralya Studio, accueil" width="156" height="52" loading="lazy"></a><p>Votre présence en ligne, simplement et efficacement.</p><span class="small">Création de sites web · Martinique</span></div><div class="footer-links"><a href="https://koralyastudio.contactkoralyastudio.workers.dev/offres/">Offres & tarifs</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/">Notre méthode</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/marketing/">Accompagnement marketing</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/">Estimer mon projet</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Contact</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/#informations">Informations & confidentialité</a></div><div class="footer-bottom"><span>© 2026 Koralya</span><span>Projet en création · Prestations sur devis</span></div></footer><script>// Ces formulaires préparent un résultat local ; aucun envoi HTML natif attendu.
+const localFormIds = new Set(['project-form', 'estimate-form', 'marketing-form', 'analytics-form']);
+document.addEventListener('submit', event => {
+  if (event.target?.tagName === 'FORM' && localFormIds.has(event.target.id)) event.preventDefault();
+}, true);
+
+const menu = document.querySelector('.menu-toggle');
+const nav = document.getElementById('navigation');
+function closeMenu() { menu?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('is-open'); }
+menu?.addEventListener('click', () => {
+  const open = menu.getAttribute('aria-expanded') !== 'true';
+  menu.setAttribute('aria-expanded', String(open));
+  nav.classList.toggle('is-open', open);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); }
+});
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.header')) closeMenu();
+});
+nav?.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+const form = document.getElementById('project-form');
+if (form) {
+  const offer = document.getElementById('offer');
+  const selected = new URLSearchParams(location.search).get('offre');
+  if (['express', 'vitrine', 'refonte', 'marketing', 'conseil', 'ia_atelier', 'ia_essentiel', 'ia_plus', 'ia_projet'].includes(selected)) offer.value = selected;
+  const result = document.getElementById('message-result');
+  const status = document.getElementById('form-status');
+  const whatsapp = document.getElementById('send-whatsapp');
+  const email = document.getElementById('send-email');
+  const preview = document.getElementById('message-preview');
+  const copy = document.getElementById('copy-message');
+  let prepared = '';
+  form.addEventListener('input', () => {
+    const wasReady = !result.hidden;
+    result.hidden = true;
+    prepared = '';
+    preview.textContent = '';
+    whatsapp.removeAttribute('href'); email.removeAttribute('href');
+    if (wasReady) status.textContent = 'Votre demande a changé. Préparez à nouveau le message pour utiliser les informations à jour.';
+  });
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const name = document.getElementById('name').value.trim();
+    const activity = document.getElementById('activity').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (activity.length < 2 || message.length < 10) {
+      status.textContent = 'Précisez votre activité et décrivez votre projet en au moins 10 caractères.';
+      return;
+    }
+    const label = offer.selectedOptions[0].textContent;
+    prepared = `Bonjour Koralya,\n\n${name ? `Je m’appelle ${name}.\n` : ''}Mon activité : ${activity}\nLe format qui m’intéresse : ${label}\n\nMon projet :\n${message}\n\nJe souhaite échanger pour préciser le périmètre et obtenir un devis.`;
+    preview.textContent = prepared;
+    whatsapp.href = `https://wa.me/596696613278?text=${encodeURIComponent(prepared)}`;
+    email.href = `mailto:koralyastudio-4627@agentmail.to?subject=${encodeURIComponent(offer.value === 'marketing' ? 'Accompagnement marketing — Koralya' : offer.value.startsWith('ia_') ? 'Mon projet d’outil IA — Koralya' : 'Mon projet de site web — Koralya')}&body=${encodeURIComponent(prepared)}`;
+    result.hidden = false;
+    copy.textContent = 'Copier le message';
+    status.textContent = 'Message préparé. Relisez-le ci-dessous ; aucun envoi effectué.';
+    result.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+  });
+  copy.addEventListener('click', async () => {
+    if (!prepared) return;
+    try {
+      await navigator.clipboard.writeText(prepared);
+      status.textContent = 'Message copié. Vous pouvez le coller dans votre application.';
+    } catch {
+      const range = document.createRange(); range.selectNodeContents(preview);
+      const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+      status.textContent = 'Le message est sélectionné. Utilisez la commande Copier de votre appareil.';
+    }
+  });
+}
+
+(function (root) {
+  'use strict';
+  const aiOffers = Object.freeze({"ia_atelier": {"name": "Atelier IA", "price": 4900, "minimum": false, "note": "Un échange guidé de 45 minutes pour choisir une tâche utile et définir votre futur outil. Comprend : Votre besoin et vos priorités; Un exemple de consigne IA réutilisable; Une fiche de cadrage remise après l’échange. Un atelier de conseil ; développement et outil livré sur devis distinct."}, "ia_essentiel": {"name": "Outil IA Essentiel", "price": 9900, "minimum": true, "note": "Une première version simple, créée à partir de votre besoin : organiser une liste, reformuler un texte ou préparer une fiche. Comprend : Un formulaire et une action IA; Un résultat à relire et copier; Un modèle de consigne adapté à votre usage; Une correction et un guide de prise en main. Un seul utilisateur, sans compte ni connexion à un logiciel métier. Petits volumes de texte."}, "ia_plus": {"name": "Outil IA Plus", "price": 19900, "minimum": true, "note": "Un outil qui accompagne deux étapes d’une même tâche, pour vos études, votre activité ou votre quotidien. Comprend : Un parcours jusqu’à deux étapes IA; Vos modèles de textes et consignes; Un export texte du résultat; Deux corrections et un guide. Un utilisateur, sans compte, stockage partagé, paiement ni intégration métier."}, "ia_projet": {"name": "Outil IA Projet", "price": 39000, "minimum": true, "note": "Un prototype à tester sur une tâche de votre organisation : supports pédagogiques, documents ou préparation de devis. Comprend : Un parcours jusqu’à trois étapes; Une connexion externe simple si disponible et validée au cadrage; Deux corrections et une prise en main; Fichiers modifiables et guide de livraison. Prototype sur périmètre défini. Comptes, droits d’accès, données sensibles, déploiement collectif et maintenance sur devis distinct."}});
+  const pricing = Object.freeze({ ...Object.fromEntries(Object.entries(aiOffers).map(([key, offer]) => [key, offer.price])), express: 10000, vitrine: 59000, refonte: 39000, extraPage: 7000, maintenance: 2500, marketing: 12900 });
+  const labels = { ...Object.fromEntries(Object.entries(aiOffers).map(([key, offer]) => [key, offer.name])), express: 'Page express sur modèle', vitrine: 'Site vitrine jusqu’à 4 pages', refonte: 'Refonte ciblée — base à partir de' };
+  const format = cents => (cents / 100).toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+  function integer(value, min, max, label) {
+    if (!['number', 'string'].includes(typeof value) || (typeof value === 'string' && !value.trim())) throw new Error(`${label} : renseignez un nombre entier.`);
+    const n = Number(value);
+    if (!Number.isSafeInteger(n) || n < min || n > max) throw new Error(`${label} : choisissez un entier entre ${min} et ${max}.`);
+    return n;
+  }
+  function calculate(input) {
+    if (!input || !Object.hasOwn(labels, input.service)) throw new Error('Choisissez une prestation proposée.');
+    const isAi = Object.hasOwn(aiOffers, input.service);
+    if (isAi && (input.maintenance || input.marketing)) throw new Error('Les accompagnements de site ne sont pas inclus dans les offres IA. Assistance et évolutions sur devis distinct.');
+    const extraPages = integer(input.extraPages ?? 0, 0, 4, 'Pages supplémentaires');
+    if (input.service !== 'vitrine' && extraPages) throw new Error('Les pages supplémentaires sont réservées au site vitrine.');
+    if (typeof input.maintenance !== 'boolean' || typeof input.marketing !== 'boolean') throw new Error('Options mensuelles invalides.');
+    const adEuros = integer(input.adBudget ?? 0, 0, 10000, 'Budget publicitaire');
+    if (!input.marketing && adEuros) throw new Error('Le budget publicitaire se simule uniquement avec l’option marketing.');
+    const months = input.months === '' || input.months === undefined || input.months === null ? null : integer(input.months, 1, 120, 'Durée simulée');
+    const onceCents = pricing[input.service] + extraPages * pricing.extraPage;
+    const monthlyCents = (input.maintenance ? pricing.maintenance : 0) + (input.marketing ? pricing.marketing : 0);
+    const advertisingCents = adEuros * 100;
+    return { service: input.service, extraPages, maintenance: input.maintenance, marketing: input.marketing, months, onceCents, monthlyCents, advertisingCents, scenarioCents: months === null ? null : onceCents + (monthlyCents + advertisingCents) * months, minimum: input.service === 'refonte' || Boolean(aiOffers[input.service]?.minimum) };
+  }
+  function summaryText(result) {
+    return [
+      'KORALYA — ESTIMATION INDICATIVE, PAS UN DEVIS DÉFINITIF',
+      `Prestation : ${labels[result.service]}`,
+      ...(result.service === 'vitrine' ? ['Offre vitrine de base : 590 € au total, TVA comprise si applicable. 3 mois de suivi offerts. Contenu, modalités et date de début du suivi précisés au devis.'] : []),
+      ...(Object.hasOwn(aiOffers, result.service) ? [aiOffers[result.service].note, 'Abonnements IA, consommation, licences, domaine et hébergement séparés et chiffrés avant engagement. Aucun usage illimité. Résultats à relire. Assistance et déploiement collectif sur devis distinct.'] : []),
+      `Pages supplémentaires : ${result.extraPages} × ${format(pricing.extraPage)}`,
+      `Base ponctuelle estimée ${result.minimum ? 'à partir de ' : ''}: ${format(result.onceCents)}`,
+      `Maintenance facultative : ${result.maintenance ? format(pricing.maintenance) + '/mois' : 'non choisie'}`,
+      `Marketing facultatif : ${result.marketing ? format(pricing.marketing) + '/mois' : 'non choisi'}`,
+      `Accompagnements : ${format(result.monthlyCents)}/mois`,
+      `Publicité séparée, payée aux régies : ${format(result.advertisingCents)}/mois`,
+      result.months === null ? 'Durée non choisie : aucun sous-total sur une durée calculé.' : `Sous-total connu sur ${result.months} mois simulés ${result.minimum ? '(base minimum) ' : ''}: ${format(result.scenarioCents)}, publicité séparée comprise dans ce scénario.`,
+      '',
+      'Durée simulée sans engagement. Prix final, TVA et frais initiaux à préciser au devis. Domaine, hébergement, licences, images et interventions externes exclus sauf mention au devis. Frais, engagement, renouvellement et résiliation des accompagnements à définir.',
+      'Aucune commande, souscription, facture ou paiement créé.'
+    ].join('\n');
+  }
+  function requestText(result, activity, details = '') {
+    if (typeof activity !== 'string' || activity.trim().length < 2 || activity.trim().length > 120) throw new Error('Précisez votre activité en 2 à 120 caractères.');
+    if (typeof details !== 'string' || details.length > 600) throw new Error('La description est limitée à 600 caractères.');
+    return `Bonjour Koralya,\n\nMon activité : ${activity.trim()}${details.trim() ? `\nMon besoin : ${details.trim()}` : ''}\n\n${summaryText(result)}\n\nJe souhaite préciser ce périmètre et recevoir un devis avec le prix final, la TVA et les conditions applicables.`;
+  }
+  const domain = { aiOffers, pricing, calculate, format, summaryText, requestText };
+  root.KoralyaEstimator = domain;
+  if (typeof module !== 'undefined' && module.exports) module.exports = domain;
+  if (typeof document === 'undefined' || !document.getElementById('estimate-form')) return;
+  const $ = id => document.getElementById(id), form = $('estimate-form'), status = $('estimate-status');
+  let result = null;
+  const selected = new URLSearchParams(root.__previewSearch || root.location?.search || '').get('offre');
+  if (Object.hasOwn(labels, selected)) $('estimate-service').value = selected;
+  const fields = ['estimate-service', 'estimate-pages', 'estimate-maintenance', 'estimate-marketing', 'estimate-ad-budget', 'estimate-months', 'estimate-activity', 'estimate-details'];
+  function invalidateRequest() {
+    $('estimate-request').hidden = true; $('estimate-message').textContent = '';
+    $('estimate-whatsapp').removeAttribute('href'); $('estimate-email').removeAttribute('href');
+  }
+  function syncControls() {
+    const isAi = Object.hasOwn(aiOffers, $('estimate-service').value);
+    for (const id of ['estimate-maintenance', 'estimate-marketing']) { $(id).disabled = isAi; if (isAi) $(id).checked = false; }
+    const extra = $('estimate-service').value === 'vitrine';
+    $('estimate-pages').disabled = !extra; if (!extra) $('estimate-pages').value = '0';
+    $('estimate-ad-budget').disabled = !$('estimate-marketing').checked;
+    if (!$('estimate-marketing').checked) $('estimate-ad-budget').value = '0';
+    $('estimate-service-note').textContent = isAi ? aiOffers[$('estimate-service').value].note + ' Abonnements et consommation IA séparés. Montant final et TVA au devis.' : $('estimate-service').value === 'express' ? 'Une page sur modèle, vos contenus et une correction.' : $('estimate-service').value === 'refonte' ? 'Base minimum : la refonte dépend de l’examen de votre site existant.' : 'Offre vitrine de base : 590 € au total, TVA comprise si applicable, jusqu’à quatre pages et 3 mois de suivi offerts. Contenu et modalités du suivi précisés au devis. Les pages supplémentaires sont estimées à part.';
+  }
+  function read() {
+    return calculate({ service: $('estimate-service').value, extraPages: $('estimate-pages').value, maintenance: $('estimate-maintenance').checked, marketing: $('estimate-marketing').checked, adBudget: $('estimate-ad-budget').value, months: $('estimate-months').value });
+  }
+  function addLine(fragment, name, value) {
+    const div = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = name; dd.textContent = value; div.append(dt, dd); fragment.append(div);
+  }
+  function render() {
+    const fragment = document.createDocumentFragment();
+    addLine(fragment, labels[result.service], format(pricing[result.service]));
+    if (result.service === 'vitrine') addLine(fragment, '3 mois de suivi', 'Offerts');
+    if (result.extraPages) addLine(fragment, `${result.extraPages} page(s) supplémentaire(s)`, format(result.extraPages * pricing.extraPage));
+    if (result.maintenance) addLine(fragment, 'Maintenance facultative', format(pricing.maintenance) + ' / mois');
+    if (result.marketing) addLine(fragment, 'Marketing facultatif', format(pricing.marketing) + ' / mois');
+    $('estimate-lines').replaceChildren(fragment);
+    $('estimate-once-label').textContent = result.minimum ? 'Base ponctuelle estimée à partir de' : 'Base ponctuelle estimée';
+    $('estimate-once').textContent = format(result.onceCents);
+    $('estimate-monthly').textContent = format(result.monthlyCents) + ' / mois';
+    $('estimate-ad-total').textContent = format(result.advertisingCents) + ' / mois';
+    $('estimate-scenario-value').textContent = result.months === null ? 'Choisissez une durée pour simuler un sous-total.' : `${format(result.scenarioCents)} sur ${result.months} mois simulés${result.minimum ? ' (base minimum)' : ''}, publicité séparée comprise.`;
+    $('estimate-text').textContent = summaryText(result);
+    $('estimate-download').disabled = false;
+  }
+  function update() {
+    const hadRequest = !$('estimate-request').hidden;
+    invalidateRequest(); syncControls();
+    try { result = read(); render(); status.textContent = hadRequest ? 'Choix modifiés. Préparez à nouveau votre demande avant de l’envoyer.' : ''; }
+    catch (error) {
+      result = null; $('estimate-lines').replaceChildren();
+      for (const id of ['estimate-once', 'estimate-monthly', 'estimate-ad-total', 'estimate-scenario-value']) $(id).textContent = '—';
+      $('estimate-text').textContent = ''; $('estimate-download').disabled = true; status.textContent = error.message;
+    }
+  }
+  for (const id of fields) $(id).addEventListener('input', update);
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    try {
+      syncControls(); result = read(); render();
+      const message = requestText(result, $('estimate-activity').value, $('estimate-details').value);
+      $('estimate-message').textContent = message;
+      $('estimate-whatsapp').href = `https://wa.me/596696613278?text=${encodeURIComponent(message)}`;
+      $('estimate-email').href = `mailto:koralyastudio-4627@agentmail.to?subject=${encodeURIComponent('Demande de devis — Koralya')}&body=${encodeURIComponent(message)}`;
+      $('estimate-request').hidden = false; status.textContent = 'Demande préparée, aucun message envoyé.';
+      $('estimate-request').scrollIntoView({ behavior: 'instant', block: 'start' });
+    } catch (error) { invalidateRequest(); status.textContent = error.message; }
+  });
+  $('estimate-download').addEventListener('click', () => {
+    if (!result) return;
+    const blob = new Blob([summaryText(result)], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = 'koralya-estimation.txt'; document.body.append(a); a.click(); a.remove(); root.setTimeout(() => URL.revokeObjectURL(url), 10000);
+    status.textContent = 'Téléchargement demandé. L’estimation reste aussi disponible en texte.';
+  });
+  update();
+})(globalThis);
+
+/* Amélioration progressive : aucune commande, aucun envoi, aucun calcul ici. */
+(function () {
+  'use strict';
+  const zone = document.querySelector('[data-journey]');
+  if (!zone) return;
+  const service = document.getElementById('estimate-service');
+  const shortcuts = Array.from(document.querySelectorAll('[data-journey-offer]'));
+  function syncOffers() {
+    for (const button of shortcuts) button.setAttribute('aria-pressed', String(button.dataset.journeyOffer === service?.value));
+  }
+  if (service) {
+    for (const button of shortcuts) button.addEventListener('click', function () {
+      const value = button.dataset.journeyOffer;
+      if (service.disabled || !Array.from(service.options).some(option => option.value === value)) return;
+      if (service.value !== value) {
+        service.value = value;
+        // Même événement que le champ existant : le module devis calcule et invalide la demande.
+        service.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+      syncOffers();
+    });
+    service.addEventListener('input', syncOffers);
+    service.addEventListener('change', syncOffers);
+    syncOffers();
+  }
+  const pause = zone.querySelector('[data-journey-pause]');
+  const preference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+  let paused = false;
+  function syncMotion() {
+    const reduced = Boolean(preference?.matches);
+    document.body.classList.toggle('journey-paused', paused || reduced);
+    document.body.classList.toggle('journey-hidden', document.hidden);
+    if (pause) {
+      pause.hidden = reduced;
+      pause.setAttribute('aria-pressed', String(paused));
+      pause.textContent = paused ? 'Animer l’illustration' : 'Mettre l’illustration en pause';
+    }
+  }
+  pause?.addEventListener('click', function () { paused = !paused; syncMotion(); });
+  document.addEventListener('visibilitychange', syncMotion);
+  preference?.addEventListener?.('change', syncMotion);
+  let observer;
+  if (typeof IntersectionObserver === 'function') {
+    observer = new IntersectionObserver(entries => {
+      for (const entry of entries) entry.target.classList.toggle('is-in-view', entry.isIntersecting);
+    }, { threshold: .08 });
+    observer.observe(zone);
+  } else zone.classList.add('is-in-view');
+  window.addEventListener('pagehide', () => observer?.disconnect());
+  window.addEventListener('pageshow', () => { observer?.observe(zone); syncMotion(); });
+  syncMotion();
+})();
+
+/* Décor WebGL local : anneaux en volume, perspective et lumière. */
+(function (root) {
+  'use strict';
+  function identity() { return [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]; }
+  function multiply(a, b) {
+    const out = new Array(16).fill(0);
+    for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) for (let k = 0; k < 4; k++) out[c * 4 + r] += a[k * 4 + r] * b[c * 4 + k];
+    return out;
+  }
+  function translation(x, y, z) { const m = identity(); m[12] = x; m[13] = y; m[14] = z; return m; }
+  function rotateX(t) { const c = Math.cos(t), s = Math.sin(t); return [1,0,0,0, 0,c,s,0, 0,-s,c,0, 0,0,0,1]; }
+  function rotateY(t) { const c = Math.cos(t), s = Math.sin(t); return [c,0,-s,0, 0,1,0,0, s,0,c,0, 0,0,0,1]; }
+  function rotateZ(t) { const c = Math.cos(t), s = Math.sin(t); return [c,s,0,0, -s,c,0,0, 0,0,1,0, 0,0,0,1]; }
+  function perspective(aspect) {
+    const f = 1 / Math.tan(Math.PI / 8), near = .1, far = 40;
+    return [f/aspect,0,0,0, 0,f,0,0, 0,0,(far+near)/(near-far),-1, 0,0,2*far*near/(near-far),0];
+  }
+  function torus(radius = 1.8, tube = .045, segments = 88, sides = 10) {
+    const vertices = [];
+    function push(a, b) {
+      const ca = Math.cos(a), sa = Math.sin(a), cb = Math.cos(b), sb = Math.sin(b);
+      vertices.push((radius + tube * cb) * ca, tube * sb, (radius + tube * cb) * sa, cb * ca, sb, cb * sa);
+    }
+    for (let a = 0; a < segments; a++) for (let b = 0; b < sides; b++) {
+      const u = a / segments * Math.PI * 2, v = b / sides * Math.PI * 2;
+      const du = Math.PI * 2 / segments, dv = Math.PI * 2 / sides;
+      push(u,v); push(u+du,v); push(u,v+dv); push(u,v+dv); push(u+du,v); push(u+du,v+dv);
+    }
+    return new Float32Array(vertices);
+  }
+  function sphere(radius = .95, segments = 40, bands = 24) {
+    const vertices = [];
+    function push(u, v) {
+      const x = Math.sin(v) * Math.cos(u), y = Math.cos(v), z = Math.sin(v) * Math.sin(u);
+      vertices.push(radius*x,radius*y,radius*z,x,y,z);
+    }
+    for (let a = 0; a < segments; a++) for (let b = 0; b < bands; b++) {
+      const u = a / segments * Math.PI * 2, v = b / bands * Math.PI;
+      const du = Math.PI * 2 / segments, dv = Math.PI / bands;
+      push(u,v); push(u+du,v); push(u,v+dv); push(u,v+dv); push(u+du,v); push(u+du,v+dv);
+    }
+    return new Float32Array(vertices);
+  }
+  function ambience(hour) {
+    const h = ((Number(hour) % 24) + 24) % 24;
+    if (h >= 6 && h < 11) return { phase: 'matin', green: .65, purple: .18, exposure: .8, speed: .55 };
+    if (h >= 11 && h < 18) return { phase: 'jour', green: 1, purple: .3, exposure: 1, speed: .8 };
+    if (h >= 18 && h < 22) return { phase: 'soir', green: .45, purple: .95, exposure: .8, speed: .55 };
+    return { phase: 'nuit', green: .24, purple: .3, exposure: .5, speed: .32 };
+  }
+  function orbit(index, time) {
+    const direction = index % 2 ? -1 : 1;
+    const theta = direction * time * (.17 + index * .021) + index * 1.71;
+    const r = 2.03 + index * .1;
+    return { x: Math.cos(theta) * r, y: Math.sin(theta * .83 + index) * (.85 + index * .09), z: Math.sin(theta) * .6 + Math.cos(theta * .4) * .12, radius: .12 + (index % 3) * .065 };
+  }
+  function scale(value) { const m = identity(); m[0] = m[5] = m[10] = value; return m; }
+  const api = { identity, multiply, translation, rotateX, rotateY, rotateZ, perspective, torus, sphere, ambience, orbit };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  if (!root.document) return;
+  const canvas = document.getElementById('desktop-scene');
+  root.KoralyaScene = { available: false, setActive() {}, setMotion() {} };
+  if (!canvas?.getContext) return;
+  let gl;
+  try { gl = canvas.getContext('webgl', { alpha: true, antialias: true, premultipliedAlpha: false, powerPreference: 'low-power' }); } catch (_) {}
+  if (!gl) { canvas.hidden = true; return; }
+  const vertexSource = `
+    attribute vec3 position; attribute vec3 normal;
+    uniform mat4 vp; uniform mat4 model; uniform float pointSize;
+    varying vec3 vNormal; varying vec3 vPosition;
+    void main() { vec4 world = model * vec4(position,1.0); vPosition = world.xyz; vNormal = mat3(model) * normal; gl_Position = vp * world; gl_PointSize = pointSize; }`;
+  const fragmentSource = `
+    precision mediump float;
+    uniform vec4 color; uniform float points; uniform float green; uniform float purple; uniform float exposure;
+    varying vec3 vNormal; varying vec3 vPosition;
+    void main() {
+      if(points > .5) { float d = length(gl_PointCoord-vec2(.5)); if(d>.5) discard; gl_FragColor=vec4(color.rgb*exposure,color.a*(1.0-d*2.0)); return; }
+      vec3 n=normalize(vNormal), eye=normalize(vec3(0.0,0.0,7.0)-vPosition), r=reflect(-eye,n);
+      vec3 l1=normalize(vec3(-2.0,3.5,5.0)), l2=normalize(vec3(3.0,-.5,2.0));
+      float rim=pow(1.0-max(dot(n,eye),0.0),2.4);
+      float shine=pow(max(dot(reflect(-l1,n),eye),0.0),72.0);
+      float strip=pow(max(1.0-abs(r.y-.25)*1.6,0.0),22.0);
+      float strip2=pow(max(1.0-abs(r.x+.6)*1.7,0.0),30.0);
+      vec3 emerald=vec3(0.0,.84,.60)*green, violet=vec3(.57,.33,1.0)*purple;
+      vec3 env=emerald*(rim*.8+max(dot(n,l1),0.0)*.18)+violet*(rim*.5+max(dot(n,l2),0.0)*.22);
+      vec3 chrome=color.rgb*(.10+max(dot(n,l1),0.0)*.23)+env+vec3(.80,.88,.91)*(shine*.9+strip*.62+strip2*.22);
+      gl_FragColor=vec4(chrome*exposure,color.a);
+    }`;
+  let program;
+  const shaders = [];
+  try {
+    function shader(type, source) { const item=gl.createShader(type); shaders.push(item); gl.shaderSource(item,source); gl.compileShader(item); if(!gl.getShaderParameter(item,gl.COMPILE_STATUS)) throw Error('shader'); return item; }
+    program=gl.createProgram(); gl.attachShader(program,shader(gl.VERTEX_SHADER,vertexSource)); gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragmentSource)); gl.linkProgram(program);
+    if(!gl.getProgramParameter(program,gl.LINK_STATUS)) throw Error('program');
+  } catch (_) { shaders.forEach(s=>gl.deleteShader(s)); if(program)gl.deleteProgram(program); canvas.hidden=true; return; }
+  shaders.forEach(s=>gl.deleteShader(s)); gl.useProgram(program);
+  const uniforms=Object.fromEntries(['vp','model','pointSize','color','points','green','purple','exposure'].map(n=>[n,gl.getUniformLocation(program,n)]));
+  const position=gl.getAttribLocation(program,'position'), normal=gl.getAttribLocation(program,'normal');
+  const lowPower=(root.navigator?.hardwareConcurrency||8)<=4 || (root.navigator?.deviceMemory||8)<=4;
+  const mobile=()=>canvas.getBoundingClientRect().width<700;
+  function mesh(data) { const buffer=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buffer); gl.bufferData(gl.ARRAY_BUFFER,data,gl.STATIC_DRAW); return {buffer,count:data.length/6}; }
+  const ring=mesh(torus(1.45,.20,lowPower?48:72,lowPower?8:12));
+  const orb=mesh(sphere(1,24,14));
+  const sparks=[];
+  for(let i=0;i<28;i++) sparks.push(Math.sin(i*17.21)*5,Math.cos(i*9.73)*2.5,-2-(i%7)*.25,0,1,0);
+  const stars=mesh(new Float32Array(sparks));
+  gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA); gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL);
+  const reduced=root.matchMedia('(prefers-reduced-motion: reduce)');
+  const shell=document.getElementById('desktop-shell'), dashboard=document.getElementById('desktop-dashboard');
+  let active=true, requestedMotion=true, frame=null, elapsed=0, last=0, lastPaint=0, lost=false;
+  let targetX=0,targetY=0,x=0,y=0,lastPointer=0,targetScroll=0,scroll=0,quality=lowPower?1:1.5,slowFrames=0;
+  let targetTheme=ambience(new Date().getHours()), theme={...targetTheme};
+  function resize() {
+    const box=canvas.getBoundingClientRect(), ratio=Math.min(root.devicePixelRatio||1,mobile()?1:quality);
+    const width=Math.max(1,Math.round(box.width*ratio)),height=Math.max(1,Math.round(box.height*ratio));
+    if(canvas.width!==width||canvas.height!==height){canvas.width=width;canvas.height=height;}
+    gl.viewport(0,0,width,height); gl.uniformMatrix4fv(uniforms.vp,false,new Float32Array(multiply(perspective(width/height),translation(0,0,-7))));
+  }
+  function draw(item, model, color, points=false, count=item.count) {
+    gl.bindBuffer(gl.ARRAY_BUFFER,item.buffer); gl.enableVertexAttribArray(position); gl.vertexAttribPointer(position,3,gl.FLOAT,false,24,0); gl.enableVertexAttribArray(normal); gl.vertexAttribPointer(normal,3,gl.FLOAT,false,24,12);
+    gl.uniformMatrix4fv(uniforms.model,false,new Float32Array(model)); gl.uniform4fv(uniforms.color,color); gl.uniform1f(uniforms.points,points?1:0); gl.uniform1f(uniforms.pointSize,mobile()?2:3);
+    gl.drawArrays(points?gl.POINTS:gl.TRIANGLES,0,count);
+  }
+  function paint() {
+    resize(); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    gl.uniform1f(uniforms.green,theme.green);gl.uniform1f(uniforms.purple,theme.purple);gl.uniform1f(uniforms.exposure,theme.exposure);
+    const center=translation(mobile()?.55:1.55,mobile()?-.05:.15,-.8);
+    const group=multiply(center,multiply(rotateX(y*.045),rotateY(x*.065+scroll*.12)));
+    draw(stars,multiply(translation(.5,0,0),rotateY(elapsed*.012)),[.57,.78,.73,.26],true,mobile()||quality===1?12:28);
+    const angles=[[.62+elapsed*.045,.30,elapsed*.026],[1.25-elapsed*.035,.55,1.10],[.42+Math.sin(elapsed*.055)*.15,1.10,2.20-elapsed*.032]];
+    const colors=[[.10,.12,.12,1],[.16,.20,.21,1],[.10,.22,.20,.68]];
+    for(let i=0;i<3;i++){
+      if(i===2)gl.depthMask(false);
+      const a=angles[i];draw(ring,multiply(group,multiply(rotateZ(a[2]),multiply(rotateX(a[0]),rotateY(a[1])))),colors[i]);
+      if(i===2)gl.depthMask(true);
+    }
+    for(let i=0;i<(mobile()||quality===1?3:5);i++){
+      const o=orbit(i,elapsed);const m=multiply(group,multiply(translation(o.x+x*.015,o.y,o.z+scroll*.10),scale(o.radius)));
+      draw(orb,m,i%2?[.13,.09,.17,1]:[.08,.17,.15,1]);
+    }
+  }
+  function canAnimate(){return active && requestedMotion && !reduced.matches && !document.hidden && !lost;}
+  function tick(now) {
+    frame=null;if(!canAnimate())return;
+    const gap=mobile()||quality===1?1000/30:1000/60;
+    if(!lastPaint||now-lastPaint>=gap-.6){
+      const dt=last?Math.min((now-last)/1000,.05):0;elapsed+=dt*theme.speed;last=now;lastPaint=now;
+      if(now-lastPointer>250){targetX=targetY=0;}
+      x+=(targetX-x)*Math.min(1,dt*3);y+=(targetY-y)*Math.min(1,dt*3);scroll+=(targetScroll-scroll)*Math.min(1,dt*2);
+      for(const key of ['green','purple','exposure','speed'])theme[key]+=(targetTheme[key]-theme[key])*Math.min(1,dt*.5);
+      const start=root.performance.now();paint();
+      if(root.performance.now()-start>18)slowFrames++;else slowFrames=Math.max(0,slowFrames-1);
+      if(slowFrames>45)quality=1;
+    }
+    frame=root.requestAnimationFrame(tick);
+  }
+  function sync() {
+    if(frame!==null)root.cancelAnimationFrame(frame);frame=null;last=lastPaint=0;canvas.hidden=!active||lost;
+    shell?.classList?.toggle('has-webgl',!lost);
+    if(active&&!document.hidden&&!lost){paint();if(canAnimate())frame=root.requestAnimationFrame(tick);}
+  }
+  root.KoralyaScene={available:true,setActive(value){if(active===Boolean(value))return;active=Boolean(value);sync();},setMotion(value){requestedMotion=Boolean(value);sync();}};
+  root.addEventListener('pointermove',event=>{
+    if(!canAnimate()||event.pointerType==='touch'||mobile())return;
+    const box=canvas.getBoundingClientRect();targetX=Math.max(-1,Math.min(1,(event.clientX-box.left)/box.width*2-1));targetY=Math.max(-1,Math.min(1,(event.clientY-box.top)/box.height*2-1));lastPointer=root.performance.now();
+  },{passive:true});
+  dashboard?.addEventListener('scroll',()=>{targetScroll=Math.min(1,dashboard.scrollTop/Math.max(1,dashboard.scrollHeight-dashboard.clientHeight));},{passive:true});
+  root.addEventListener('resize',sync);document.addEventListener('visibilitychange',sync);reduced.addEventListener('change',sync);
+  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();lost=true;root.KoralyaScene.available=false;sync();});
+  root.setInterval(()=>{targetTheme=ambience(new Date().getHours());if(!canAnimate()){theme={...targetTheme};sync();}},60000);
+  // Premier rendu planifié ; le canvas décoratif ne capture aucune interaction.
+  root.requestAnimationFrame(sync);
+})(typeof window !== 'undefined' ? window : globalThis);
+
+
+(function(){const button=document.getElementById('seo-motion');if(!button||!window.KoralyaScene?.available)return;let paused=false;const preference=window.matchMedia('(prefers-reduced-motion: reduce)');function sync(){const reduced=preference.matches;button.hidden=reduced;button.setAttribute('aria-pressed',String(paused));button.textContent=paused?'Animer le fond':'Mettre le fond en pause';window.KoralyaScene.setMotion(!paused&&!reduced);}button.addEventListener('click',()=>{paused=!paused;sync();});preference.addEventListener('change',sync);sync();})();
+</script></body></html>
