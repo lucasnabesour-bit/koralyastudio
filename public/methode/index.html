@@ -56,6 +56,127 @@
 @media(max-width:1050px){.desktop-dashboard{column-gap:20px}.desktop-welcome h1{font-size:46px}.desktop-ad-card{max-width:280px}}
 @media(max-width:700px){.desktop-scene{opacity:.30;mask-image:linear-gradient(to bottom,#0008,transparent 80%)}.desktop-shell::before{background:#05050594}.desktop-shell::after{background:linear-gradient(to bottom,transparent,#050505db 75%)}.desktop-shell .wallpaper{object-position:65% center}.desktop-welcome h1{font-size:39px;line-height:1.08}.desktop-welcome{padding-block:10px}.desktop-ad-card{justify-self:stretch;max-width:none}.desktop-presentation{background:#0d0d10fa}.desktop-welcome>p:not(.desktop-eyebrow){font-size:14px}}
 @media(prefers-reduced-motion:reduce){.desktop-scene{opacity:.6}.desktop-shell .wallpaper{animation:none!important}.desktop-ad-card{transition:none}}
+
+/* Direction Premium sombre. Contenu et contrôles réels, sans image de page. */
+:root{--bg:#050505;--panel:#101614;--text:#f5f5f7;--muted:#b4b9b6;--line:#29362f;--accent:#00d69a}
+.premium-scope,.premium-header{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#f5f5f7;line-height:1.65;box-sizing:border-box}
+.premium-scope *,.premium-header *{box-sizing:border-box}
+.premium-scope{width:100%;max-width:1200px;margin:0 auto;padding:0 28px}
+.premium-scope h1,.premium-scope h2,.premium-scope h3,.premium-scope p{margin-top:0}
+.premium-scope h1{font-size:clamp(34px,4.7vw,62px);letter-spacing:-.045em;line-height:1.08;font-weight:650;margin-bottom:22px;max-width:19ch}
+.premium-scope h2{font-size:clamp(28px,3vw,40px);letter-spacing:-.035em;line-height:1.18;font-weight:600;margin-bottom:20px}
+.premium-scope h3{font-size:21px;line-height:1.3;letter-spacing:-.02em;margin-bottom:16px}
+.premium-scope p{color:#bdc3bf;font-size:16px}
+.premium-scope a{color:#a0f0d4;text-underline-offset:4px}
+.premium-scope .premium-eyebrow,.premium-scope .premium-card-index{font-size:11px;font-weight:700;line-height:1.6;letter-spacing:1.6px;color:#63dfb5;margin-bottom:16px}
+.premium-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:22px;padding:56px 0 12px;isolation:isolate}
+.premium-hero-copy{position:relative;z-index:1;min-width:0}
+.premium-scope .premium-lead{font-size:17px;line-height:1.7;max-width:53ch;margin-bottom:24px}
+.premium-price-block{padding:20px 22px;border:1px solid #356b54;border-radius:16px;background:#0c1b15;max-width:640px;margin-bottom:24px}
+.premium-scope .premium-price-title{font-size:13px;color:#bcefd8;font-weight:600;margin-bottom:14px}
+.premium-price-equation{display:grid;grid-template-columns:1fr 1.1fr;gap:16px;margin:0}
+.premium-price-equation>div{min-width:0}
+.premium-price-equation dt{font-size:13px;color:#d0dbd4;margin:0 0 2px}
+.premium-price-equation dd{margin:0;font-size:31px;line-height:1.25;font-weight:650;letter-spacing:-1px;white-space:nowrap}
+.premium-price-equation dd small{font-size:15px;font-weight:400;letter-spacing:0}
+.premium-price-equation .premium-price-total{grid-column:1/-1;border-top:1px solid #ffffff26;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.premium-price-total dd{font-size:25px}
+.premium-scope .premium-mandatory{margin:12px 0 6px;font-size:14px;font-weight:600;color:#e6f3eb}
+.premium-scope .premium-price-exclusions{font-size:12px;line-height:1.6;margin:0;color:#b8c8be}
+.premium-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.premium-button,.premium-scope .premium-button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;gap:8px;border-radius:9px;border:1px solid #00d69a;background:#00d69a;color:#042018;padding:13px 21px;font:600 14px/1.5 Arial,Helvetica,sans-serif;text-decoration:none;text-align:center;cursor:pointer;white-space:normal}
+.premium-button-secondary,.premium-scope .premium-button-secondary{background:#101412;border-color:#537463;color:#f5f5f7}
+.premium-benefits{display:flex;flex-wrap:wrap;gap:10px 22px;padding:0;margin:22px 0 0;list-style:none;color:#c4d0c9;font-size:12px}
+.premium-benefits li{padding-left:12px;border-left:2px solid #00a879}
+.premium-decoration{min-width:0;pointer-events:none;align-self:center}
+.premium-orb{display:block;width:100%;height:auto;max-width:480px;animation:premium-float 14s ease-in-out infinite;will-change:transform}
+.premium-motion-row{display:flex;justify-content:flex-end;margin-bottom:18px}
+.premium-text-button{min-height:48px;min-width:48px;color:#c3dacd;border:1px solid #45584d;background:#0b0f0c;border-radius:8px;font:13px/1.5 Arial,Helvetica,sans-serif;padding:10px 14px;cursor:pointer}
+.premium-section{padding:64px 0;scroll-margin-top:20px;border-top:1px solid #ffffff1c;min-width:0}
+.premium-intro{max-width:65ch;margin-bottom:30px}
+.premium-grid{display:grid;gap:24px;margin-top:30px}
+.premium-grid-two,.premium-accompaniment{grid-template-columns:repeat(2,minmax(0,1fr))}
+.premium-card{padding:30px;border-radius:16px;border:1px solid #2b3b32;background:#0e1511;min-width:0}
+.premium-card p:last-child{margin-bottom:0}
+.premium-list{padding:0 0 0 20px;color:#c9d2cd;margin:0}
+.premium-list li{padding-left:6px;margin:0 0 14px;font-size:15px}
+.premium-list li::marker{color:#59d8a9}
+.premium-scope .premium-note{font-size:13px;line-height:1.75;color:#b4b9b6;margin-top:22px}
+.premium-accompaniment{display:grid;gap:44px;align-items:start}
+.premium-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:0;list-style:none;margin:32px 0 0}
+.premium-steps li{border-top:1px solid #3c5c49;padding-top:18px}
+.premium-steps li>span{display:block;color:#65ddb3;font-size:13px;margin-bottom:22px}
+.premium-steps p{font-size:15px}
+.premium-demo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:32px;align-items:start}
+.premium-demo{border:1px solid #304139;border-radius:15px;background:#101412;overflow:hidden;min-width:0}
+.premium-demo>summary{display:flex;flex-direction:column;padding:28px;min-height:200px;cursor:pointer;list-style:none}
+.premium-demo>summary::-webkit-details-marker{display:none}
+.premium-demo strong{font-size:25px;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.premium-demo summary>span:not(.premium-card-index){font-size:14px;color:#bbc9c0}
+.premium-demo summary .premium-demo-open{margin-top:20px;color:#82e3ba!important;text-decoration:underline;text-underline-offset:4px}
+.premium-demo[open] .premium-demo-open::after{content:" · ouvert"}
+.premium-demo article{padding:28px;border-top:1px solid #304139;background:#09120d}
+.premium-demo article ul{padding-left:20px;color:#bdc9c1;font-size:14px}
+.premium-demo article a{display:inline-flex;align-items:center;min-height:48px;font-size:14px}
+.premium-other{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.premium-other>div{max-width:63ch}
+.premium-faq details{padding:0;border:0;border-bottom:1px solid #34433a;background:none}
+.premium-faq summary{padding:22px 4px;min-height:56px;cursor:pointer;font-size:17px;color:#eef4f0;line-height:1.5}
+.premium-faq details p{padding:0 4px 22px;max-width:80ch;margin:0;line-height:1.8}
+.premium-contact-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.premium-contact-aside{min-width:0}
+.premium-contact-aside h3{font-size:26px}
+.premium-contact-aside a{display:block;padding:14px 0;min-height:48px;overflow-wrap:anywhere}
+.premium-contact-aside a>span{display:block;color:#b4b9b6;font-size:12px}
+.premium-contact-aside a>strong{font-size:16px;font-weight:500}
+.premium-form-card{background:#0d120f!important;border:1px solid #344a3c!important;border-radius:16px!important;padding:30px!important;min-width:0}
+.premium-form-card label{font-size:14px;line-height:1.6;margin:20px 0 8px;display:block;color:#e3eae6}
+.premium-form-card input,.premium-form-card select,.premium-form-card textarea{box-sizing:border-box;display:block;width:100%;min-width:0;min-height:50px;margin:0;padding:12px;border:1px solid #64786c;border-radius:7px;background:#090e0b;color:#f5f5f7;font:16px/1.6 Arial,Helvetica,sans-serif}
+.premium-form-card select{white-space:normal;font-size:15px}
+.premium-form-card textarea{resize:vertical;min-height:120px}
+.premium-scope .premium-field-help{font-size:12px;margin:6px 0 0;color:#b4b9b6}
+.premium-contact-recap{padding:16px;border-left:2px solid #00d69a;background:#101e17;font-size:13px!important;color:#d4ebdd!important;line-height:1.75}
+.premium-form-card form>p:first-of-type{font-size:14px!important;color:#b4b9b6!important;line-height:1.75}
+.premium-form-card #form-status{color:#b3e9cf;font-size:14px;margin:18px 0 0;min-height:1.7em}
+.premium-form-card .message-result{margin-top:24px;padding-top:24px;border-top:1px solid #344a3c;outline:none}
+.premium-form-card pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#060a07;border:1px solid #344a3c;font:13px/1.8 Arial,Helvetica,sans-serif;color:#dce8df}
+.contact-direct{margin-top:24px;padding-top:24px;border-top:1px solid #344a3c;min-width:0}
+.contact-direct p{font-size:13px;line-height:1.75;overflow-wrap:anywhere}
+.contact-direct button:disabled{opacity:.65;cursor:default}
+#contact-challenge{max-width:100%;margin:16px 0;min-width:0}
+.premium-footer{border-top:1px solid #ffffff1c;padding:32px 0 40px}
+.premium-footer>p{font-size:14px}
+.premium-footer>div{display:flex;flex-wrap:wrap;gap:8px 24px}
+.premium-footer a{display:inline-flex;align-items:center;min-height:48px;font-size:13px}
+.premium-scope :is(a,button,input,select,textarea,summary):focus-visible,.premium-header :is(a,button):focus-visible{outline:3px solid #b4f5d9;outline-offset:4px}
+.premium-scope [hidden],.premium-header [hidden]{display:none!important}
+.premium-header{padding:16px max(24px,calc((100vw - 1144px)/2))!important;gap:22px;background:#080d0a!important;backdrop-filter:none!important;min-height:82px;border-bottom:1px solid #26352c;justify-content:space-between;flex-wrap:wrap}
+.premium-brand{display:inline-flex;align-items:center;min-height:48px;flex-shrink:0;background:transparent;border:0;padding:0;cursor:pointer}
+.premium-brand img{display:block;width:150px;height:auto;max-height:55px;object-fit:contain}
+.premium-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 20px;min-width:0}
+.premium-nav a{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;color:#dce8df;font-size:13px;line-height:1.5}
+.premium-nav .premium-button{padding:11px 16px;font-size:13px;color:#042018}
+.premium-header-tools{display:flex;align-items:center;gap:6px}
+.premium-header-tools button{min-height:44px;font-size:12px;color:#b9cec1;background:none;border:0;padding:8px;cursor:pointer}
+.premium-header-tools:empty{display:none}
+.premium-skip{position:absolute;top:8px;left:16px;z-index:100;padding:12px 18px;border-radius:8px;background:#f5f5f7;color:#07140d!important;font-size:15px;transform:translateY(-180%)}
+.premium-skip:focus{transform:translateY(0)}
+#desktop-shell{grid-template-rows:auto minmax(0,1fr) 86px;min-height:0;background:#050505}
+#desktop-dashboard{display:block;max-width:none;width:100%;height:100%;padding:0;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable}
+#desktop-dashboard .desktop-bottom-note{max-width:1144px;margin:0 auto;padding:10px 28px 24px;color:#a9b9ae}
+#desktop-shell .wallpaper,#desktop-shell .desktop-scene{opacity:.09!important}
+.desktop-ad-card{display:none!important}
+.seo-public-page .header,.seo-public-page .footer{background:#080d0a!important}
+.seo-public-page .header{height:auto;min-height:82px}
+.seo-public-page .form-card,.seo-public-page .estimate-summary,.seo-public-page .marketing-offer{background:#101613;border-color:#344a3c}
+.seo-public-page main>.premium-scope{padding-top:0}
+@keyframes premium-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.premium-paused .premium-orb,.premium-hidden .premium-orb{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.premium-orb{animation:none;will-change:auto}.premium-scope *{scroll-behavior:auto!important;transition:none!important}}
+@media(hover:hover){.premium-button:hover{background:#67e9bd;border-color:#67e9bd}.premium-button-secondary:hover{background:#1c2c22;color:#f5f5f7;border-color:#86bba0}.premium-nav a:hover,.premium-scope a:not(.premium-button):hover{color:#dcffef}}
+@media(max-width:1100px){.premium-header{gap:10px!important;padding:12px 24px!important}.premium-header-tools{display:none}.premium-nav{gap:0 16px}.premium-brand img{width:126px}.premium-hero{grid-template-columns:minmax(0,1.5fr) minmax(0,.6fr);padding-top:40px;gap:0}.premium-price-block{max-width:630px}}
+@media(max-width:800px){.premium-hero{grid-template-columns:minmax(0,1fr);padding-top:28px}.premium-decoration{position:absolute;right:-15px;top:0;width:210px;opacity:.13;z-index:0}.premium-hero-copy{max-width:100%}.premium-scope h1{font-size:42px;max-width:20ch}.premium-price-block{max-width:none}.premium-accompaniment,.premium-contact-layout{grid-template-columns:1fr;gap:24px}.premium-section{padding:44px 0}.premium-contact-aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.premium-contact-aside h3,.premium-contact-aside>p{grid-column:1/-1}.premium-motion-row{margin-top:8px}.premium-other{display:block}.premium-nav{gap:0 15px}.premium-header{align-content:start;justify-content:flex-start;gap:4px 18px!important}.premium-nav .premium-button{margin:4px 0}.premium-brand{margin-right:auto}.premium-scope{padding:0 24px}}
+@media(max-width:540px){.premium-header{padding:8px 16px!important}.premium-brand img{width:120px}.premium-nav{width:100%;justify-content:flex-start;gap:0 16px}.premium-nav a{font-size:12px;min-height:44px}.premium-nav .premium-button{min-height:44px;padding:9px 13px;font-size:12px}.premium-scope{padding:0 18px}.premium-scope h1{font-size:34px;margin-bottom:18px}.premium-scope .premium-lead{font-size:15px;line-height:1.6;margin-bottom:20px}.premium-hero{padding-top:24px}.premium-price-block{padding:16px;margin-bottom:20px;border-radius:12px}.premium-price-equation{gap:10px}.premium-price-equation dd{font-size:28px}.premium-price-equation dt{font-size:12px}.premium-price-equation dd small{font-size:13px}.premium-mandatory{font-size:13px!important}.premium-price-total dd{font-size:24px}.premium-actions{gap:10px}.premium-actions>.premium-button{flex:1 1 145px;padding:12px 14px;font-size:13px}.premium-benefits{font-size:11px;gap:12px}.premium-grid-two,.premium-demo-grid,.premium-steps{grid-template-columns:1fr}.premium-card,.premium-form-card{padding:22px!important}.premium-steps{gap:20px}.premium-steps li>span{margin-bottom:12px}.premium-contact-aside{display:block}.premium-demo>summary{padding:24px;min-height:180px}.premium-motion-row{justify-content:flex-start}.premium-decoration{width:150px;top:4px;opacity:.1}.premium-section{padding:36px 0}#desktop-shell{grid-template-rows:auto minmax(0,1fr) 80px}#desktop-dock{max-width:calc(100vw - 12px);gap:0}.desktop-footer{padding-inline:6px}.premium-price-equation .premium-price-total{flex-wrap:wrap}}
 </style><style></style><noscript><style>@media(max-width:680px){.header{height:auto;flex-wrap:wrap;padding-block:15px}.header nav{display:flex;position:static;width:100%;flex-direction:row;flex-wrap:wrap}.menu-toggle{display:none}}</style></noscript><style>
 .seo-public-page{position:relative;isolation:isolate;background:transparent;min-height:100dvh}.seo-wallpaper,.seo-scene{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-3;object-fit:cover;opacity:.2}.seo-scene{z-index:-2;opacity:.38}.seo-public-page.has-webgl .seo-wallpaper{opacity:.06}.seo-public-page::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg,#050505f5,#050505c9 45%,#05050580)}.seo-public-page .header,.seo-public-page .footer{position:relative}.seo-background-controls{display:flex;justify-content:flex-end;padding-top:12px}#seo-motion{min-height:44px;background:#0d1711;color:#bde9d3;border:1px solid #446451;border-radius:7px;padding:9px 12px;font:12px/1.5 Arial;cursor:pointer}#seo-motion:focus-visible{outline:3px solid #a87cff;outline-offset:4px}.seo-public-page .footer{margin-top:25px}@media(prefers-reduced-motion:reduce){.seo-scene{opacity:.25}}
 </style><title>Création de site : les étapes de votre projet | Koralya Studio</title><meta name="description" content="Échange, maquette, développement, validation et livraison : découvrez la méthode Koralya Studio, les fichiers remis et les informations à préparer."><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="Création de site : les étapes de votre projet | Koralya Studio"><meta property="og:description" content="Échange, maquette, développement, validation et livraison : découvrez la méthode Koralya Studio, les fichiers remis et les informations à préparer."><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Koralya Studio"><meta property="og:url" content="https://koralyastudio.contactkoralyastudio.workers.dev/methode/"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#organization", "name": "Koralya Studio", "url": "https://koralyastudio.contactkoralyastudio.workers.dev/"}, {"@type": "WebSite", "@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#website", "name": "Koralya Studio", "url": "https://koralyastudio.contactkoralyastudio.workers.dev/", "inLanguage": "fr", "publisher": {"@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#organization"}}, {"@type": "WebPage", "@id": "https://koralyastudio.contactkoralyastudio.workers.dev/methode/#webpage", "url": "https://koralyastudio.contactkoralyastudio.workers.dev/methode/", "name": "Création de site : les étapes de votre projet | Koralya Studio", "description": "Échange, maquette, développement, validation et livraison : découvrez la méthode Koralya Studio, les fichiers remis et les informations à préparer.", "inLanguage": "fr", "isPartOf": {"@id": "https://koralyastudio.contactkoralyastudio.workers.dev/#website"}}]}</script><style>/* Fond choisi n°3 : l’image générée reste derrière la présentation et les offres. */
@@ -71,11 +192,131 @@
 .seo-public-page:not(.has-webgl):not(.aurora-paused):not(.aurora-hidden) .seo-wallpaper{animation:koralya-atmosphere-drift 38s ease-in-out infinite alternate}
 @media(max-width:700px){.desktop-shell .desktop-scene{opacity:.42}.seo-public-page .seo-scene{opacity:.28}.desktop-shell .wallpaper,.seo-public-page .seo-wallpaper{object-position:55% center}}
 @media(prefers-reduced-motion:reduce){.desktop-shell .wallpaper,.seo-public-page .seo-wallpaper{animation:none!important}}
+</style><style>/* Direction Premium sombre. Contenu et contrôles réels, sans image de page. */
+:root{--bg:#050505;--panel:#101614;--text:#f5f5f7;--muted:#b4b9b6;--line:#29362f;--accent:#00d69a}
+.premium-scope,.premium-header{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#f5f5f7;line-height:1.65;box-sizing:border-box}
+.premium-scope *,.premium-header *{box-sizing:border-box}
+.premium-scope{width:100%;max-width:1200px;margin:0 auto;padding:0 28px}
+.premium-scope h1,.premium-scope h2,.premium-scope h3,.premium-scope p{margin-top:0}
+.premium-scope h1{font-size:clamp(34px,4.7vw,62px);letter-spacing:-.045em;line-height:1.08;font-weight:650;margin-bottom:22px;max-width:19ch}
+.premium-scope h2{font-size:clamp(28px,3vw,40px);letter-spacing:-.035em;line-height:1.18;font-weight:600;margin-bottom:20px}
+.premium-scope h3{font-size:21px;line-height:1.3;letter-spacing:-.02em;margin-bottom:16px}
+.premium-scope p{color:#bdc3bf;font-size:16px}
+.premium-scope a{color:#a0f0d4;text-underline-offset:4px}
+.premium-scope .premium-eyebrow,.premium-scope .premium-card-index{font-size:11px;font-weight:700;line-height:1.6;letter-spacing:1.6px;color:#63dfb5;margin-bottom:16px}
+.premium-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:22px;padding:56px 0 12px;isolation:isolate}
+.premium-hero-copy{position:relative;z-index:1;min-width:0}
+.premium-scope .premium-lead{font-size:17px;line-height:1.7;max-width:53ch;margin-bottom:24px}
+.premium-price-block{padding:20px 22px;border:1px solid #356b54;border-radius:16px;background:#0c1b15;max-width:640px;margin-bottom:24px}
+.premium-scope .premium-price-title{font-size:13px;color:#bcefd8;font-weight:600;margin-bottom:14px}
+.premium-price-equation{display:grid;grid-template-columns:1fr 1.1fr;gap:16px;margin:0}
+.premium-price-equation>div{min-width:0}
+.premium-price-equation dt{font-size:13px;color:#d0dbd4;margin:0 0 2px}
+.premium-price-equation dd{margin:0;font-size:31px;line-height:1.25;font-weight:650;letter-spacing:-1px;white-space:nowrap}
+.premium-price-equation dd small{font-size:15px;font-weight:400;letter-spacing:0}
+.premium-price-equation .premium-price-total{grid-column:1/-1;border-top:1px solid #ffffff26;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.premium-price-total dd{font-size:25px}
+.premium-scope .premium-mandatory{margin:12px 0 6px;font-size:14px;font-weight:600;color:#e6f3eb}
+.premium-scope .premium-price-exclusions{font-size:12px;line-height:1.6;margin:0;color:#b8c8be}
+.premium-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.premium-button,.premium-scope .premium-button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;gap:8px;border-radius:9px;border:1px solid #00d69a;background:#00d69a;color:#042018;padding:13px 21px;font:600 14px/1.5 Arial,Helvetica,sans-serif;text-decoration:none;text-align:center;cursor:pointer;white-space:normal}
+.premium-button-secondary,.premium-scope .premium-button-secondary{background:#101412;border-color:#537463;color:#f5f5f7}
+.premium-benefits{display:flex;flex-wrap:wrap;gap:10px 22px;padding:0;margin:22px 0 0;list-style:none;color:#c4d0c9;font-size:12px}
+.premium-benefits li{padding-left:12px;border-left:2px solid #00a879}
+.premium-decoration{min-width:0;pointer-events:none;align-self:center}
+.premium-orb{display:block;width:100%;height:auto;max-width:480px;animation:premium-float 14s ease-in-out infinite;will-change:transform}
+.premium-motion-row{display:flex;justify-content:flex-end;margin-bottom:18px}
+.premium-text-button{min-height:48px;min-width:48px;color:#c3dacd;border:1px solid #45584d;background:#0b0f0c;border-radius:8px;font:13px/1.5 Arial,Helvetica,sans-serif;padding:10px 14px;cursor:pointer}
+.premium-section{padding:64px 0;scroll-margin-top:20px;border-top:1px solid #ffffff1c;min-width:0}
+.premium-intro{max-width:65ch;margin-bottom:30px}
+.premium-grid{display:grid;gap:24px;margin-top:30px}
+.premium-grid-two,.premium-accompaniment{grid-template-columns:repeat(2,minmax(0,1fr))}
+.premium-card{padding:30px;border-radius:16px;border:1px solid #2b3b32;background:#0e1511;min-width:0}
+.premium-card p:last-child{margin-bottom:0}
+.premium-list{padding:0 0 0 20px;color:#c9d2cd;margin:0}
+.premium-list li{padding-left:6px;margin:0 0 14px;font-size:15px}
+.premium-list li::marker{color:#59d8a9}
+.premium-scope .premium-note{font-size:13px;line-height:1.75;color:#b4b9b6;margin-top:22px}
+.premium-accompaniment{display:grid;gap:44px;align-items:start}
+.premium-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:0;list-style:none;margin:32px 0 0}
+.premium-steps li{border-top:1px solid #3c5c49;padding-top:18px}
+.premium-steps li>span{display:block;color:#65ddb3;font-size:13px;margin-bottom:22px}
+.premium-steps p{font-size:15px}
+.premium-demo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:32px;align-items:start}
+.premium-demo{border:1px solid #304139;border-radius:15px;background:#101412;overflow:hidden;min-width:0}
+.premium-demo>summary{display:flex;flex-direction:column;padding:28px;min-height:200px;cursor:pointer;list-style:none}
+.premium-demo>summary::-webkit-details-marker{display:none}
+.premium-demo strong{font-size:25px;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.premium-demo summary>span:not(.premium-card-index){font-size:14px;color:#bbc9c0}
+.premium-demo summary .premium-demo-open{margin-top:20px;color:#82e3ba!important;text-decoration:underline;text-underline-offset:4px}
+.premium-demo[open] .premium-demo-open::after{content:" · ouvert"}
+.premium-demo article{padding:28px;border-top:1px solid #304139;background:#09120d}
+.premium-demo article ul{padding-left:20px;color:#bdc9c1;font-size:14px}
+.premium-demo article a{display:inline-flex;align-items:center;min-height:48px;font-size:14px}
+.premium-other{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.premium-other>div{max-width:63ch}
+.premium-faq details{padding:0;border:0;border-bottom:1px solid #34433a;background:none}
+.premium-faq summary{padding:22px 4px;min-height:56px;cursor:pointer;font-size:17px;color:#eef4f0;line-height:1.5}
+.premium-faq details p{padding:0 4px 22px;max-width:80ch;margin:0;line-height:1.8}
+.premium-contact-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.premium-contact-aside{min-width:0}
+.premium-contact-aside h3{font-size:26px}
+.premium-contact-aside a{display:block;padding:14px 0;min-height:48px;overflow-wrap:anywhere}
+.premium-contact-aside a>span{display:block;color:#b4b9b6;font-size:12px}
+.premium-contact-aside a>strong{font-size:16px;font-weight:500}
+.premium-form-card{background:#0d120f!important;border:1px solid #344a3c!important;border-radius:16px!important;padding:30px!important;min-width:0}
+.premium-form-card label{font-size:14px;line-height:1.6;margin:20px 0 8px;display:block;color:#e3eae6}
+.premium-form-card input,.premium-form-card select,.premium-form-card textarea{box-sizing:border-box;display:block;width:100%;min-width:0;min-height:50px;margin:0;padding:12px;border:1px solid #64786c;border-radius:7px;background:#090e0b;color:#f5f5f7;font:16px/1.6 Arial,Helvetica,sans-serif}
+.premium-form-card select{white-space:normal;font-size:15px}
+.premium-form-card textarea{resize:vertical;min-height:120px}
+.premium-scope .premium-field-help{font-size:12px;margin:6px 0 0;color:#b4b9b6}
+.premium-contact-recap{padding:16px;border-left:2px solid #00d69a;background:#101e17;font-size:13px!important;color:#d4ebdd!important;line-height:1.75}
+.premium-form-card form>p:first-of-type{font-size:14px!important;color:#b4b9b6!important;line-height:1.75}
+.premium-form-card #form-status{color:#b3e9cf;font-size:14px;margin:18px 0 0;min-height:1.7em}
+.premium-form-card .message-result{margin-top:24px;padding-top:24px;border-top:1px solid #344a3c;outline:none}
+.premium-form-card pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#060a07;border:1px solid #344a3c;font:13px/1.8 Arial,Helvetica,sans-serif;color:#dce8df}
+.contact-direct{margin-top:24px;padding-top:24px;border-top:1px solid #344a3c;min-width:0}
+.contact-direct p{font-size:13px;line-height:1.75;overflow-wrap:anywhere}
+.contact-direct button:disabled{opacity:.65;cursor:default}
+#contact-challenge{max-width:100%;margin:16px 0;min-width:0}
+.premium-footer{border-top:1px solid #ffffff1c;padding:32px 0 40px}
+.premium-footer>p{font-size:14px}
+.premium-footer>div{display:flex;flex-wrap:wrap;gap:8px 24px}
+.premium-footer a{display:inline-flex;align-items:center;min-height:48px;font-size:13px}
+.premium-scope :is(a,button,input,select,textarea,summary):focus-visible,.premium-header :is(a,button):focus-visible{outline:3px solid #b4f5d9;outline-offset:4px}
+.premium-scope [hidden],.premium-header [hidden]{display:none!important}
+.premium-header{padding:16px max(24px,calc((100vw - 1144px)/2))!important;gap:22px;background:#080d0a!important;backdrop-filter:none!important;min-height:82px;border-bottom:1px solid #26352c;justify-content:space-between;flex-wrap:wrap}
+.premium-brand{display:inline-flex;align-items:center;min-height:48px;flex-shrink:0;background:transparent;border:0;padding:0;cursor:pointer}
+.premium-brand img{display:block;width:150px;height:auto;max-height:55px;object-fit:contain}
+.premium-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 20px;min-width:0}
+.premium-nav a{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;color:#dce8df;font-size:13px;line-height:1.5}
+.premium-nav .premium-button{padding:11px 16px;font-size:13px;color:#042018}
+.premium-header-tools{display:flex;align-items:center;gap:6px}
+.premium-header-tools button{min-height:44px;font-size:12px;color:#b9cec1;background:none;border:0;padding:8px;cursor:pointer}
+.premium-header-tools:empty{display:none}
+.premium-skip{position:absolute;top:8px;left:16px;z-index:100;padding:12px 18px;border-radius:8px;background:#f5f5f7;color:#07140d!important;font-size:15px;transform:translateY(-180%)}
+.premium-skip:focus{transform:translateY(0)}
+#desktop-shell{grid-template-rows:auto minmax(0,1fr) 86px;min-height:0;background:#050505}
+#desktop-dashboard{display:block;max-width:none;width:100%;height:100%;padding:0;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable}
+#desktop-dashboard .desktop-bottom-note{max-width:1144px;margin:0 auto;padding:10px 28px 24px;color:#a9b9ae}
+#desktop-shell .wallpaper,#desktop-shell .desktop-scene{opacity:.09!important}
+.desktop-ad-card{display:none!important}
+.seo-public-page .header,.seo-public-page .footer{background:#080d0a!important}
+.seo-public-page .header{height:auto;min-height:82px}
+.seo-public-page .form-card,.seo-public-page .estimate-summary,.seo-public-page .marketing-offer{background:#101613;border-color:#344a3c}
+.seo-public-page main>.premium-scope{padding-top:0}
+@keyframes premium-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.premium-paused .premium-orb,.premium-hidden .premium-orb{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.premium-orb{animation:none;will-change:auto}.premium-scope *{scroll-behavior:auto!important;transition:none!important}}
+@media(hover:hover){.premium-button:hover{background:#67e9bd;border-color:#67e9bd}.premium-button-secondary:hover{background:#1c2c22;color:#f5f5f7;border-color:#86bba0}.premium-nav a:hover,.premium-scope a:not(.premium-button):hover{color:#dcffef}}
+@media(max-width:1100px){.premium-header{gap:10px!important;padding:12px 24px!important}.premium-header-tools{display:none}.premium-nav{gap:0 16px}.premium-brand img{width:126px}.premium-hero{grid-template-columns:minmax(0,1.5fr) minmax(0,.6fr);padding-top:40px;gap:0}.premium-price-block{max-width:630px}}
+@media(max-width:800px){.premium-hero{grid-template-columns:minmax(0,1fr);padding-top:28px}.premium-decoration{position:absolute;right:-15px;top:0;width:210px;opacity:.13;z-index:0}.premium-hero-copy{max-width:100%}.premium-scope h1{font-size:42px;max-width:20ch}.premium-price-block{max-width:none}.premium-accompaniment,.premium-contact-layout{grid-template-columns:1fr;gap:24px}.premium-section{padding:44px 0}.premium-contact-aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.premium-contact-aside h3,.premium-contact-aside>p{grid-column:1/-1}.premium-motion-row{margin-top:8px}.premium-other{display:block}.premium-nav{gap:0 15px}.premium-header{align-content:start;justify-content:flex-start;gap:4px 18px!important}.premium-nav .premium-button{margin:4px 0}.premium-brand{margin-right:auto}.premium-scope{padding:0 24px}}
+@media(max-width:540px){.premium-header{padding:8px 16px!important}.premium-brand img{width:120px}.premium-nav{width:100%;justify-content:flex-start;gap:0 16px}.premium-nav a{font-size:12px;min-height:44px}.premium-nav .premium-button{min-height:44px;padding:9px 13px;font-size:12px}.premium-scope{padding:0 18px}.premium-scope h1{font-size:34px;margin-bottom:18px}.premium-scope .premium-lead{font-size:15px;line-height:1.6;margin-bottom:20px}.premium-hero{padding-top:24px}.premium-price-block{padding:16px;margin-bottom:20px;border-radius:12px}.premium-price-equation{gap:10px}.premium-price-equation dd{font-size:28px}.premium-price-equation dt{font-size:12px}.premium-price-equation dd small{font-size:13px}.premium-mandatory{font-size:13px!important}.premium-price-total dd{font-size:24px}.premium-actions{gap:10px}.premium-actions>.premium-button{flex:1 1 145px;padding:12px 14px;font-size:13px}.premium-benefits{font-size:11px;gap:12px}.premium-grid-two,.premium-demo-grid,.premium-steps{grid-template-columns:1fr}.premium-card,.premium-form-card{padding:22px!important}.premium-steps{gap:20px}.premium-steps li>span{margin-bottom:12px}.premium-contact-aside{display:block}.premium-demo>summary{padding:24px;min-height:180px}.premium-motion-row{justify-content:flex-start}.premium-decoration{width:150px;top:4px;opacity:.1}.premium-section{padding:36px 0}#desktop-shell{grid-template-rows:auto minmax(0,1fr) 80px}#desktop-dock{max-width:calc(100vw - 12px);gap:0}.desktop-footer{padding-inline:6px}.premium-price-equation .premium-price-total{flex-wrap:wrap}}
 </style></head>
 <body id="desktop-shell" class="seo-public-page methode-page"><img class="seo-wallpaper" src="/assets/koralya-atmosphere-e35ff79edcbf3466.webp" alt="" width="1672" height="941"><canvas id="desktop-scene" class="seo-scene" aria-hidden="true"></canvas><a class="skip" href="#contenu">Aller au contenu</a>
-    <header class="header"><a class="brand" href="https://koralyastudio.contactkoralyastudio.workers.dev/" aria-label="Koralya, accueil"><img src="/assets/faaa33559b838f8e.webp" alt="Koralya Studio" width="156" height="52"></a>
+    <header class="header"><a class="brand" href="https://koralyastudio.contactkoralyastudio.workers.dev/" aria-label="Koralya, accueil"><img src="/assets/logo-koralya-premium.webp" alt="Koralya Studio" width="156" height="52"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
-    <nav id="navigation" aria-label="Navigation principale"><a href="https://koralyastudio.contactkoralyastudio.workers.dev/">Accueil</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/offres/">Offres & tarifs</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/" aria-current="page">Notre méthode</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/marketing/">Marketing</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/">Estimer</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Demander un devis</a></nav></header><style>/* Section Méthode : illustrations 3D pré-rendues, interactions locales, aucun animal. */
+    <nav id="navigation" aria-label="Navigation principale"><a href="https://koralyastudio.contactkoralyastudio.workers.dev/">Accueil</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/offres/">Offres & tarifs</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/" aria-current="page">Notre méthode</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/marketing/">Marketing</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/">Estimer</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Présenter mon projet</a></nav></header><style>/* Section Méthode : illustrations 3D pré-rendues, interactions locales, aucun animal. */
 .methode-page{--method-surface:#0d1416;--method-muted:#bfcdc8;--method-line:#ffffff24;--method-green:#00d69a;color:#f5f5f7;scrollbar-color:#326657 #080c0d}
 .methode-page ::selection{background:#00d69a;color:#042219}
 .methode-page .method-intro{padding-block:52px 24px;text-align:center}
@@ -156,80 +397,213 @@
 <section class="wrap method-section" aria-labelledby="method-delivery-title"><div class="method-section-heading"><h2 id="method-delivery-title">Ce que vous pouvez attendre.</h2><p>Des éléments concrets à relire, vérifier et conserver.</p></div><div class="method-delivery-layout"><figure class="method-file-visual"><span class="method-art method-art-large" data-art="livraison" aria-hidden="true"></span><figcaption>Vos fichiers, organisés pour la suite.</figcaption></figure><dl class="method-deliverables"><div><dt><span class="method-proof-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM9 10h6M9 14h6M9 18h4"/></svg></span>Un devis précis</dt><dd>Les pages, le prix, la TVA, les corrections et le délai sont définis avant de commencer.</dd></div><div><dt><span class="method-proof-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 7h1M11 7h1"/></svg></span>Une prévisualisation</dt><dd>Une version consultable pour relire les textes, les coordonnées et la présentation.</dd></div><div><dt><span class="method-proof-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/></svg></span>Des contrôles</dt><dd>Les liens, les ressources et le parcours de contact sont examinés avant la remise.</dd></div><div><dt><span class="method-proof-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7V5h7l2 2h9v13H3zM7 12h10M7 16h6"/></svg></span>Vos fichiers</dt><dd>Les sources, une archive et un guide. L’hébergement est cadré séparément au devis.</dd></div></dl></div></section>
 <section class="wrap method-section method-preparation" aria-labelledby="method-prep-title"><div class="method-prep-intro"><h2 id="method-prep-title">Votre petite liste de départ.</h2><p>Rassemblons les informations utiles à votre futur site.</p><span class="method-art method-prep-art" data-art="preparation" aria-hidden="true"></span><p class="method-prep-note">Cochez ce que vous avez déjà repéré. Aucun document n’est demandé ici.</p></div><div class="method-prep-content"><fieldset class="method-checklist"><legend>Les six éléments à rassembler</legend><label><input type="checkbox" data-method-prep><span>Le nom et la présentation de votre activité</span></label><label><input type="checkbox" data-method-prep><span>Vos services et les informations à afficher</span></label><label><input type="checkbox" data-method-prep><span>Votre logo et vos images utilisables</span></label><label><input type="checkbox" data-method-prep><span>Votre téléphone, e-mail ou WhatsApp</span></label><label><input type="checkbox" data-method-prep><span>Votre identité et les informations légales</span></label><label><input type="checkbox" data-method-prep><span>Votre domaine et hébergement, si vous en avez</span></label></fieldset><div class="method-prep-feedback" id="method-prep-feedback" hidden><div><label id="method-prep-progress-label" for="method-prep-progress">Votre point de départ</label><output id="method-prep-count" aria-live="polite">0 sur 6 éléments repérés</output></div><progress id="method-prep-progress" max="6" value="0" aria-labelledby="method-prep-progress-label"></progress><p id="method-prep-message">Vous pouvez commencer avec ce que vous avez.</p><button type="button" id="method-prep-reset" class="method-subtle" disabled>Tout décocher</button><p class="method-prep-privacy">Cette liste reste dans cet onglet et s’efface au rechargement. Elle n’envoie aucun message et ne confirme aucune commande.</p></div></div></section>
 <section class="wrap method-section method-faq faq-section"><div><h2>Un périmètre sans surprise.</h2><p>Les réponses utiles avant de commencer.</p></div><div class="faq"><details><summary>Quand le calendrier est-il fixé ?</summary><p>Après réception des contenus et validation du périmètre. Le délai et les retours prévus figurent au devis.</p></details><details><summary>Comment se passe la publication ?</summary><p>Le dossier est préparé pour un hébergement statique. La destination, les accès et l’intervention de mise en ligne sont à préciser au devis. Une adresse publique n’est confirmée qu’après publication vérifiée.</p></details><details><summary>À qui sont remis les fichiers ?</summary><p>Vous recevez les fichiers modifiables et leur guide. Les images sous licence et les interventions externes sont traitées selon les conditions précisées au devis.</p></details></div></section>
-<section class="wrap cta method-cta"><div><h2>Parlons de votre activité.</h2><p>Le premier échange sert à préciser votre besoin.</p></div><a class="button" href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Demander un devis</a></section>
-</main><footer class="footer"><div><a class="brand" href="https://koralyastudio.contactkoralyastudio.workers.dev/"><img src="/assets/faaa33559b838f8e.webp" alt="Koralya Studio, accueil" width="156" height="52" loading="lazy"></a><p>Votre présence en ligne, simplement et efficacement.</p><span class="small">Création de sites web · Martinique</span></div><div class="footer-links"><a href="https://koralyastudio.contactkoralyastudio.workers.dev/offres/">Offres & tarifs</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/">Notre méthode</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/marketing/">Accompagnement marketing</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/">Estimer mon projet</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Contact</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/#informations">Informations & confidentialité</a></div><div class="footer-bottom"><span>© 2026 Koralya</span><span>Projet en création · Prestations sur devis</span></div></footer><script>// Ces formulaires préparent un résultat local ; aucun envoi HTML natif attendu.
-const localFormIds = new Set(['project-form', 'estimate-form', 'marketing-form', 'analytics-form']);
-document.addEventListener('submit', event => {
-  if (event.target?.tagName === 'FORM' && localFormIds.has(event.target.id)) event.preventDefault();
-}, true);
-
-const menu = document.querySelector('.menu-toggle');
-const nav = document.getElementById('navigation');
-function closeMenu() { menu?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('is-open'); }
-menu?.addEventListener('click', () => {
-  const open = menu.getAttribute('aria-expanded') !== 'true';
-  menu.setAttribute('aria-expanded', String(open));
-  nav.classList.toggle('is-open', open);
-});
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); }
-});
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.header')) closeMenu();
-});
-nav?.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
-const form = document.getElementById('project-form');
-if (form) {
-  const offer = document.getElementById('offer');
-  const selected = new URLSearchParams(location.search).get('offre');
-  if (['express', 'vitrine', 'refonte', 'marketing', 'conseil', 'ia_atelier', 'ia_essentiel', 'ia_plus', 'ia_projet'].includes(selected)) offer.value = selected;
-  const result = document.getElementById('message-result');
-  const status = document.getElementById('form-status');
-  const whatsapp = document.getElementById('send-whatsapp');
-  const email = document.getElementById('send-email');
-  const preview = document.getElementById('message-preview');
-  const copy = document.getElementById('copy-message');
+<section class="wrap cta method-cta"><div><h2>Parlons de votre activité.</h2><p>Le premier échange sert à préciser votre besoin.</p></div><a class="button" href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Présenter mon projet</a></section>
+</main><footer class="footer"><div><a class="brand" href="https://koralyastudio.contactkoralyastudio.workers.dev/"><img src="/assets/logo-koralya-premium.webp" alt="Koralya Studio, accueil" width="156" height="52" loading="lazy"></a><p>Votre présence en ligne, simplement et efficacement.</p><span class="small">Création de sites web · Martinique</span></div><div class="footer-links"><a href="https://koralyastudio.contactkoralyastudio.workers.dev/offres/">Offres & tarifs</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/methode/">Notre méthode</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/marketing/">Accompagnement marketing</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/devis/">Estimer mon projet</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/">Contact</a><a href="https://koralyastudio.contactkoralyastudio.workers.dev/contact/#informations">Informations & confidentialité</a></div><div class="footer-bottom"><span>© 2026 Koralya</span><span>Projet en création · Prestations sur devis</span></div></footer><script>(function (root) {
+  'use strict';
+  const terms = 'Offre de lancement : 150 € à la création + 49 €/mois pendant 6 mois obligatoires. Total : 444 €, hors domaine, hébergement et options précisés au devis.';
+  function invalid(message, field) { throw Object.assign(new Error(message), { field }); }
+  function prepare(input) {
+    const name = String(input?.name || '').trim();
+    const activity = String(input?.activity || '').trim();
+    const contact = String(input?.contact || '').trim();
+    const message = String(input?.message || '').trim();
+    const offers = { express: 'Offre de lancement Koralya Studio', vitrine: 'Site de plusieurs pages · sur devis', refonte: 'Refonte · sur devis', marketing: 'Marketing digital · sur devis', ia_atelier: 'Atelier IA · sur devis', ia_essentiel: 'Outil IA Essentiel · sur devis', ia_plus: 'Outil IA Plus · sur devis', ia_projet: 'Outil IA Projet · sur devis', conseil: 'Autre besoin · sur devis' };
+    if (name.length < 2 || name.length > 80) invalid('Indique ton nom en 2 à 80 caractères.', 'name');
+    if (activity.length < 2 || activity.length > 120) invalid('Précise ton entreprise ou ton activité en 2 à 120 caractères.', 'activity');
+    const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+    const digits = contact.replace(/[^0-9]/g, '');
+    const phone = /^[+0-9().\s-]+$/.test(contact) && digits.length >= 8 && digits.length <= 15;
+    if (contact.length > 120 || (!email && !phone)) invalid('Indique une adresse e-mail ou un numéro de téléphone valide pour te recontacter.', 'contact-detail');
+    if (!Object.hasOwn(offers, input.offer)) invalid('Choisis un type de projet proposé.', 'offer');
+    if (message.length < 10 || message.length > 1200) invalid('Décris ton projet en 10 à 1 200 caractères.', 'message');
+    const text = `Bonjour Koralya,\n\nMon nom : ${name}\nMon entreprise ou activité : ${activity}\nMon contact : ${contact}\nMon projet : ${offers[input.offer]}\n\n${message}\n\n${input.offer === 'express' ? terms + '\nUne page jusqu’à cinq sections, accompagnement obligatoire sur six mois.\n\n' : ''}Je souhaite un échange et un devis. Cette demande ne constitue ni commande ni abonnement.`;
+    return { text, whatsapp: 'https://wa.me/596696613278?text=' + encodeURIComponent(text), email: 'mailto:koralyastudio-4627@agentmail.to?subject=' + encodeURIComponent('Mon projet — Koralya Studio') + '&body=' + encodeURIComponent(text) };
+  }
+  const api = { prepare, terms };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  if (!root.document) return;
+  const document = root.document;
+  const menu = document.querySelector('.menu-toggle'), nav = document.getElementById('navigation');
+  function closeMenu() { menu?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('is-open'); }
+  menu?.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav?.classList.toggle('is-open', open); });
+  nav?.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
+  document.addEventListener('click', event => { if (!event.target.closest('.header')) closeMenu(); });
+  const form = document.getElementById('project-form');
+  if (!form) return;
+  const $ = id => document.getElementById(id), result = $('message-result'), status = $('form-status');
+  const offer = $('offer');
+  const selected = new URLSearchParams(root.__previewSearch || root.location?.search || '').get('offre');
+  if (Array.from(offer.options).some(option => option.value === selected)) offer.value = selected;
   let prepared = '';
-  form.addEventListener('input', () => {
-    const wasReady = !result.hidden;
-    result.hidden = true;
-    prepared = '';
-    preview.textContent = '';
-    whatsapp.removeAttribute('href'); email.removeAttribute('href');
-    if (wasReady) status.textContent = 'Votre demande a changé. Préparez à nouveau le message pour utiliser les informations à jour.';
-  });
+  function invalidate() {
+    const ready = !result.hidden;
+    prepared = ''; result.hidden = true; $('message-preview').textContent = '';
+    $('send-whatsapp').removeAttribute('href'); $('send-email').removeAttribute('href');
+    if (ready) status.textContent = 'Ta demande a changé. Prépare à nouveau le message avant de continuer.';
+  }
+  form.addEventListener('input', event => { event.target?.removeAttribute?.('aria-invalid'); invalidate(); });
+  form.addEventListener('change', event => { event.target?.removeAttribute?.('aria-invalid'); invalidate(); });
   form.addEventListener('submit', event => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
-    const name = document.getElementById('name').value.trim();
-    const activity = document.getElementById('activity').value.trim();
-    const message = document.getElementById('message').value.trim();
-    if (activity.length < 2 || message.length < 10) {
-      status.textContent = 'Précisez votre activité et décrivez votre projet en au moins 10 caractères.';
-      return;
-    }
-    const label = offer.selectedOptions[0].textContent;
-    prepared = `Bonjour Koralya,\n\n${name ? `Je m’appelle ${name}.\n` : ''}Mon activité : ${activity}\nLe format qui m’intéresse : ${label}\n\nMon projet :\n${message}\n\nJe souhaite échanger pour préciser le périmètre et obtenir un devis.`;
-    preview.textContent = prepared;
-    whatsapp.href = `https://wa.me/596696613278?text=${encodeURIComponent(prepared)}`;
-    email.href = `mailto:koralyastudio-4627@agentmail.to?subject=${encodeURIComponent(offer.value === 'marketing' ? 'Accompagnement marketing — Koralya' : offer.value.startsWith('ia_') ? 'Mon projet d’outil IA — Koralya' : 'Mon projet de site web — Koralya')}&body=${encodeURIComponent(prepared)}`;
-    result.hidden = false;
-    copy.textContent = 'Copier le message';
-    status.textContent = 'Message préparé. Relisez-le ci-dessous ; aucun envoi effectué.';
-    result.scrollIntoView({ block: 'nearest', behavior: 'instant' });
-  });
-  copy.addEventListener('click', async () => {
-    if (!prepared) return;
+    invalidate();
+    if (!form.reportValidity()) { status.textContent = 'Complète les champs indiqués avant de préparer le message.'; return; }
     try {
-      await navigator.clipboard.writeText(prepared);
-      status.textContent = 'Message copié. Vous pouvez le coller dans votre application.';
-    } catch {
-      const range = document.createRange(); range.selectNodeContents(preview);
-      const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
-      status.textContent = 'Le message est sélectionné. Utilisez la commande Copier de votre appareil.';
+      const request = prepare({ name: $('name').value, activity: $('activity').value, contact: $('contact-detail').value, offer: offer.value, message: $('message').value });
+      prepared = request.text;
+      $('message-preview').textContent = prepared; $('send-whatsapp').href = request.whatsapp; $('send-email').href = request.email;
+      result.hidden = false; status.textContent = 'Message préparé, aucun envoi effectué. Relis-le puis confirme dans ton application.';
+      result.focus({ preventScroll: true }); result.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+    } catch (error) { status.textContent = error.message; if (error.field && $(error.field)) { $(error.field).setAttribute('aria-invalid', 'true'); $(error.field).focus(); } }
+  });
+  $('copy-message').addEventListener('click', async () => {
+    if (!prepared) return;
+    try { await root.navigator.clipboard.writeText(prepared); status.textContent = 'Message copié. Tu peux le coller dans ton application.'; }
+    catch (_) {
+      const range = document.createRange(); range.selectNodeContents($('message-preview'));
+      const selection = root.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+      status.textContent = 'Le message est sélectionné. Utilise la commande Copier de ton appareil.';
     }
   });
-}
+})(typeof window === 'undefined' ? globalThis : window);
+
+(function () {
+  document.querySelectorAll('.premium-nav a[href^="#"]').forEach(link => link.addEventListener('click', () => {
+    if (document.getElementById('desktop-dashboard')?.hidden) document.getElementById('desktop-home')?.click();
+  }));
+  const button = document.getElementById('premium-motion');
+  if (!button) return;
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = false;
+  function sync() {
+    const stop = paused || preference.matches;
+    document.documentElement.classList.toggle('premium-paused', stop);
+    button.hidden = preference.matches;
+    button.setAttribute('aria-pressed', String(paused));
+    button.textContent = paused ? 'Animer le décor' : 'Mettre les animations en pause';
+    const original = document.getElementById('desktop-motion');
+    if (original) { original.checked = !stop; original.dispatchEvent(new Event('change', { bubbles: true })); }
+    window.KoralyaScene?.setMotion(!stop);
+  }
+  button.addEventListener('click', () => { paused = !paused; sync(); });
+  preference.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('premium-hidden', document.hidden));
+  sync();
+})();
+
+(function (root) {
+  'use strict';
+  const document = root.document, form = document?.getElementById('project-form');
+  if (!form || !root.fetch || !root.crypto?.randomUUID) return;
+  // La publication statique ne sonde pas une API qui n’est pas déployée.
+  if (document.documentElement?.dataset.contactDirect !== 'enabled') return;
+  const $ = id => document.getElementById(id);
+  const area = $('contact-direct'), button = $('contact-direct-send'), status = $('contact-direct-status');
+  if (!area || !button || !status) return;
+  let endpoint;
+  try {
+    endpoint = new URL('/api/contact', document.baseURI);
+    if (endpoint.protocol !== 'https:') return;
+    // Le serveur doit être du même site que la page, y compris dans un srcdoc.
+    if (new URL(document.baseURI).origin !== endpoint.origin) return;
+  } catch (_) { return; }
+  let available = false, siteKey = '', widget = null, token = '', busy = false;
+  const timeout = ms => root.AbortSignal?.timeout ? root.AbortSignal.timeout(ms) : undefined;
+  let requestId = null, version = 0, accepted = false, pendingChallenge = null;
+  const note = $('contact-delivery-note'), privacy = $('contact-delivery-privacy'), intro = $('message-result-note');
+  const normalIntro = intro?.textContent || '';
+  function invalidate() {
+    version++; requestId = null; accepted = false; token = '';
+    button.disabled = busy;
+    status.textContent = '';
+    if (intro) intro.textContent = normalIntro;
+    if (widget !== null) root.turnstile?.reset(widget);
+  }
+  form.addEventListener('input', invalidate);
+  form.addEventListener('change', invalidate);
+  form.addEventListener('submit', () => {
+    if (accepted && !$('message-result').hidden && intro) $('form-status').textContent = intro.textContent;
+  });
+  function resetToken() { token = ''; if (widget !== null) root.turnstile?.reset(widget); }
+  async function ensureChallenge() {
+    if (!root.turnstile) {
+      if (!pendingChallenge) pendingChallenge = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; script.async = true;
+        const timeout = root.setTimeout(() => reject(new Error('challenge load failed')), 12000);
+        script.onload = () => { root.clearTimeout(timeout); resolve(); };
+        script.onerror = () => { root.clearTimeout(timeout); reject(new Error('challenge load failed')); };
+        document.head.append(script);
+      }).catch(error => { pendingChallenge = null; throw error; });
+      await pendingChallenge;
+    }
+    if (!root.turnstile) throw new Error('challenge unavailable');
+    if (widget === null) widget = root.turnstile.render($('contact-challenge'), {
+      sitekey: siteKey, action: 'contact', language: 'fr', size: 'flexible',
+      callback: value => { token = value; if (!busy && !accepted) status.textContent = 'Vérification terminée. Tu peux envoyer le message relu ci-dessus.'; },
+      'expired-callback': () => { token = ''; if (!busy) status.textContent = 'La vérification a expiré. Recommence-la avant d’envoyer.'; },
+      'error-callback': () => { token = ''; if (!busy) status.textContent = 'La vérification est indisponible. WhatsApp et e-mail restent disponibles.'; }
+    });
+  }
+  function errorText(code) {
+    if (code === 'not_connected') return 'L’envoi direct n’est pas connecté. Utilise WhatsApp ou ton e-mail.';
+    if (code === 'rate_limited') return 'Trop de demandes rapprochées. Attends quelques minutes ou utilise un autre moyen de contact.';
+    if (['challenge_rejected', 'challenge_unavailable'].includes(code)) return 'La vérification anti-spam a échoué ou expiré. Recommence-la, ou utilise WhatsApp ou e-mail.';
+    if (code === 'invalid_request') return 'La demande n’est pas valide. Vérifie les champs puis prépare à nouveau le message.';
+    if (code === 'origin_rejected') return 'L’envoi est refusé depuis cette page. Utilise WhatsApp ou ton e-mail.';
+    return 'L’état de l’envoi est incertain. Ne renvoie pas automatiquement le même message. Contacte Koralya par WhatsApp ou e-mail pour vérifier.';
+  }
+  button.addEventListener('click', async () => {
+    if (!available || busy || accepted || $('message-result').hidden) return;
+    if (!form.reportValidity()) return;
+    const fields = { name: $('name').value, activity: $('activity').value, contact: $('contact-detail').value, offer: $('offer').value, message: $('message').value };
+    // La préparation originale doit avoir été refaite après toute modification.
+    if (!fields.name.trim() || !fields.activity.trim() || !fields.contact.trim() || !fields.message.trim()) return;
+    busy = true; button.disabled = true;
+    const startVersion = version;
+    let attempted = false;
+    try {
+      if (!token) {
+        status.textContent = 'Vérifie que tu es une personne, puis clique à nouveau pour envoyer.';
+        await ensureChallenge(); return;
+      }
+      requestId ||= root.crypto.randomUUID();
+      const reference = requestId;
+      status.textContent = 'Envoi de la demande en cours…';
+      attempted = true;
+      const response = await root.fetch(endpoint.href, {
+        method: 'POST', credentials: 'same-origin', cache: 'no-store',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...fields, requestId: reference, token }), signal: timeout(22000)
+      });
+      const data = await response.json();
+      if (startVersion !== version) {
+        $('form-status').textContent = response.status === 202 && data.status === 'accepted' && data.reference === reference ? 'La demande précédente a été prise en charge. Tes nouveaux champs n’ont pas été envoyés.' : 'L’état de l’envoi précédent est incertain. Vérifie auprès de Koralya avant de le renvoyer.';
+        return;
+      }
+      if (response.status === 202 && data.status === 'accepted' && data.reference === reference) {
+        accepted = true;
+        const message = 'Demande prise en charge pour envoi. La réception n’est pas encore confirmée. Référence : ' + reference;
+        status.textContent = message; $('form-status').textContent = message;
+        if (intro) intro.textContent = message;
+      } else status.textContent = errorText(data.code);
+    } catch (_) {
+      if (startVersion === version) status.textContent = attempted ? errorText('delivery_unknown') : 'La protection anti-spam est indisponible. Aucun envoi direct effectué. WhatsApp et e-mail restent disponibles.';
+    } finally {
+      busy = false; button.disabled = accepted;
+      if (attempted) resetToken();
+    }
+  });
+  // Un aperçu local ou une API absente conserve le parcours WhatsApp/e-mail.
+  root.fetch(endpoint.href + '/config', { credentials: 'same-origin', cache: 'no-store', signal: timeout(5000) }).then(async response => {
+    if (!response.ok) return;
+    const data = await response.json();
+    if (data.available !== true || typeof data.siteKey !== 'string' || !data.siteKey) return;
+    available = true; siteKey = data.siteKey; area.hidden = false;
+    if (note) note.textContent = 'Prépare le message puis choisis WhatsApp, e-mail ou l’envoi direct. Aucun envoi n’a lieu pendant la préparation.';
+    if (privacy) privacy.textContent = 'La préparation reste locale. Si tu choisis l’envoi direct, tes champs sont transmis à Koralya via son service de messagerie et une protection anti-spam. Cette demande ne crée ni commande ni abonnement.';
+  }).catch(() => {});
+})(typeof window === 'undefined' ? globalThis : window);
 
 /* Illustrations pédagogiques : état local à l’onglet, aucun envoi ni stockage. */
 (function (root) {
