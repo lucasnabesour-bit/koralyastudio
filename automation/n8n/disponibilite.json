@@ -1,0 +1,24 @@
+{
+  "name": "Koralya — disponibilité toutes les 5 minutes",
+  "active": false,
+  "settings": {"executionOrder": "v1", "timezone": "America/Martinique", "executionTimeout": 180, "saveDataSuccessExecution": "none", "saveDataErrorExecution": "all"},
+  "nodes": [
+    {"id": "schedule", "name": "Toutes les 5 minutes", "type": "n8n-nodes-base.scheduleTrigger", "typeVersion": 1.2, "position": [0, 0], "parameters": {"rule": {"interval": [{"field": "minutes", "minutesInterval": 5}]}}},
+    {"id": "manual", "name": "Tester manuellement", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [0, 200], "parameters": {}},
+    {"id": "pages", "name": "Pages à vérifier", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [240, 0], "parameters": {"jsCode": "const base = 'https://koralyastudio.contactkoralyastudio.workers.dev';\nreturn ['/', '/offres/', '/contact/'].map(path => ({ json: { url: base + path, path } }));"}},
+    {"id": "request", "name": "Lire les pages publiques", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [480, 0], "retryOnFail": true, "maxTries": 2, "waitBetweenTries": 5000, "onError": "continueRegularOutput", "parameters": {"url": "={{ $json.url }}", "options": {"timeout": 15000, "redirect": {"redirect": {"followRedirects": false}}, "response": {"response": {"fullResponse": true, "neverError": false, "responseFormat": "text"}}}}},
+    {"id": "classify", "name": "Résumer le contrôle", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [720, 0], "parameters": {"jsCode": "const pages = $('Pages à vérifier').all();\nconst responses = $input.all();\nconst checks = pages.map((page, index) => {\n  const value = responses[index]?.json ?? {};\n  const body = typeof value.body === 'string' ? value.body : '';\n  const status = Number(value.statusCode || 0);\n  const ok = !value.error && status === 200 && /<html[\\s>]/i.test(body) && /<title[\\s>]/i.test(body) && /<main[\\s>]/i.test(body);\n  return { path: page.json.path, status: status || null, ok };\n});\nreturn [{ json: { site: 'Koralya Studio', checkedAt: new Date().toISOString(), healthy: checks.every(check => check.ok), checks } }];"}},
+    {"id": "if", "name": "Site disponible", "type": "n8n-nodes-base.if", "typeVersion": 2.2, "position": [960, 0], "parameters": {"conditions": {"options": {"caseSensitive": true, "leftValue": "", "typeValidation": "strict", "version": 2}, "conditions": [{"id": "healthy", "leftValue": "={{ $json.healthy }}", "rightValue": "", "operator": {"type": "boolean", "operation": "true", "singleValue": true}}], "combinator": "and"}, "options": {}}},
+    {"id": "failure", "name": "Signaler une indisponibilité", "type": "n8n-nodes-base.stopAndError", "typeVersion": 1, "position": [1200, 160], "parameters": {"errorMessage": "={{ 'Koralya Studio : contrôle en échec. ' + JSON.stringify($json.checks) }}"}}
+  ],
+  "connections": {
+    "Toutes les 5 minutes": {"main": [[{"node": "Pages à vérifier", "type": "main", "index": 0}]]},
+    "Tester manuellement": {"main": [[{"node": "Pages à vérifier", "type": "main", "index": 0}]]},
+    "Pages à vérifier": {"main": [[{"node": "Lire les pages publiques", "type": "main", "index": 0}]]},
+    "Lire les pages publiques": {"main": [[{"node": "Résumer le contrôle", "type": "main", "index": 0}]]},
+    "Résumer le contrôle": {"main": [[{"node": "Site disponible", "type": "main", "index": 0}]]},
+    "Site disponible": {"main": [[], [{"node": "Signaler une indisponibilité", "type": "main", "index": 0}]]}
+  },
+  "pinData": {},
+  "tags": []
+}

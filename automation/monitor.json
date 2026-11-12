@@ -1,0 +1,7 @@
+{
+  "base_url": "https://koralyastudio.contactkoralyastudio.workers.dev",
+  "pages": ["/", "/offres/", "/methode/", "/marketing/", "/devis/", "/contact/", "/demonstrations/rendez-vous/"],
+  "timeout_seconds": 15,
+  "max_internal_links": 35,
+  "contact_direct_required": false
+}
