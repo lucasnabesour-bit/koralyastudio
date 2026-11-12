@@ -5,6 +5,12 @@ on:
     # Lundi à 08 h en Martinique (UTC-4).
     - cron: '0 12 * * 1'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/site_monitor.py
+      - automation/monitor.json
+      - .github/workflows/site-monitor.yml
   pull_request:
     paths:
       - scripts/site_monitor.py
