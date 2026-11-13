@@ -1,0 +1,9 @@
+{
+  "lookback_days": 14,
+  "max_items_per_source": 5,
+  "sources": [
+    {"id": "cloudflare", "name": "Cloudflare — blog officiel", "category": "Hébergement et sécurité web", "feed_url": "https://blog.cloudflare.com/rss/", "article_hosts": ["blog.cloudflare.com"]},
+    {"id": "webdev", "name": "web.dev — plateforme web", "category": "Performance et bonnes pratiques web", "feed_url": "https://web.dev/feed.xml", "article_hosts": ["web.dev"]},
+    {"id": "certfr", "name": "CERT-FR — alertes officielles", "category": "Vulnérabilités à examiner selon les technologies utilisées", "feed_url": "https://www.cert.cyber.gouv.fr/alerte/feed/", "article_hosts": ["www.cert.cyber.gouv.fr", "cert.cyber.gouv.fr"]}
+  ]
+}
