@@ -5,6 +5,7 @@
 - Un contrôleur sans dépendance externe pour les pages publiques, les liens internes, les en-têtes de protection, robots.txt et le sitemap.
 - Un workflow GitHub Actions programmé le lundi à 08 h en Martinique. Il conserve un rapport lisible et un fichier JSON pendant 30 jours.
 - Un workflow n8n importable pour contrôler l’accueil, les offres et le contact toutes les cinq minutes, avec une seconde tentative en cas d’erreur HTTP ou réseau.
+- Une veille quotidienne des flux officiels Cloudflare, web.dev et CERT-FR, avec un rapport GitHub à 08 h 15 en Martinique.
 
 Aucun fichier du site public n’est modifié. Ces contrôles ne couvrent pas les secrets, les droits du compte Cloudflare, les dépendances du serveur, les sauvegardes ou le fonctionnement interactif du navigateur. Une réponse HTTP 200 seule ne garantit pas le fonctionnement de toutes les fonctions.
 
@@ -17,6 +18,22 @@ Pour un contrôle immédiat : ouvrir l’onglet **Actions**, sélectionner **Con
 Les erreurs de disponibilité, de structure des pages, de liens ou de sitemap font échouer le contrôle. Les en-têtes manquants génèrent des avertissements ; ils ne prouvent pas une intrusion. Le formulaire actuel WhatsApp/e-mail est pris en compte : l’absence d’envoi direct reste informative. Lorsque l’envoi direct sera réellement installé, passer `contact_direct_required` à `true` dans `automation/monitor.json`.
 
 Les notifications d’échec dépendent des préférences de notification GitHub du compte qui exécute ou possède le workflow. Aucun e-mail, SMS ou message WhatsApp n’est envoyé par ce code.
+
+## Veille quotidienne des sources
+
+Le workflow **Veille quotidienne Koralya** collecte les flux définis dans `automation/sources.json`. Il conserve jusqu’à cinq articles par source, publiés dans les quatorze derniers jours, avec titre, lien, date et extrait de 500 caractères au maximum. Les articles complets ne sont pas téléchargés. Ce sont des sources de départ pour la veille technique de Koralya, pas une étude des concurrents ni une liste de données commerciales à importer.
+
+La collecte démarre après intégration du workflow sur la branche par défaut, puis chaque jour à 08 h 15 en Martinique. Elle est aussi exécutable depuis **Actions → Veille quotidienne Koralya → Run workflow**. Le résumé contient les articles ; les fichiers `veille.json` et `veille.md` sont conservés trente jours. GitHub peut retarder ou suspendre les calendriers dans les mêmes conditions que pour le contrôle hebdomadaire.
+
+Une source inaccessible est signalée clairement, même si les autres fonctionnent. Si toutes les sources échouent, le workflow échoue. Une source valide sans article récent n’est pas une erreur. Les dates sont celles des flux ; une modification récente d’un ancien article peut ne pas être détectée. Les alertes CERT-FR doivent être rapprochées des technologies réellement utilisées avant toute action.
+
+Le rapport est un instantané de veille : un article peut apparaître plusieurs jours de suite tant qu’il reste dans la fenêtre. Les doublons de liens sont supprimés au sein d’un rapport. Aucune publication sur le site, modification de prix, inscription à un service ou requête IA payante n’est déclenchée.
+
+Pour exécuter la collecte localement :
+
+```sh
+python3 -m scripts.source_watch
+```
 
 ## Disponibilité dans n8n
 
@@ -42,7 +59,7 @@ Les rapports sont écrits dans `reports/`, ignoré par Git. Les requêtes sont d
 
 ## Suite : veille et mises à jour par IA
 
-Cette partie attend le choix du compte IA et la connexion à un espace n8n. Elle n’est pas incluse dans cette première installation et aucun appel IA payant n’est effectué.
+La rédaction IA et la publication attendent le choix du compte IA et la connexion à un espace n8n. La collecte des sources fonctionne déjà indépendamment sur GitHub ; aucun appel IA payant n’est effectué.
 
 Le circuit prévu est : sources autorisées sélectionnées → collecte → propositions sourcées → branche GitHub → prévisualisation Cloudflare → vérifications → publication. Les tarifs, paiements, coordonnées et mentions légales demandent une validation explicite. Les instructions présentes dans les sources de veille doivent être traitées comme du contenu et ne doivent pas piloter la publication.
 
